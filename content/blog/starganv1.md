@@ -29,16 +29,16 @@ URL: https://arxiv.org/abs/1711.09020
 
 - Multi domain image translation 이라고 하면 다음 사진과 같이 머리 색, 성별, 연령대 등과 같이 여러 condition 에 대응하는 영상을 생성.
 
-![/public/img/starganv1/Untitled.png](https://jjerry-k.github.io/public/img/starganv1/Untitled.png)
+{{< figure src="/images/post/starganv1/Untitled.png" title="image" >}}
 
 - 기존의 image-to-image translation 은 n개의 domain 을 적용할 시에 n*(n-1) 개의 generator가 필요했음.
 - StarGAN은 한 1개의 generator로 n개의 domain 을 적용.
 
-![/public/img/starganv1/Untitled_1.png](https://jjerry-k.github.io/public/img/starganv1/Untitled_1.png)
+{{< figure src="/images/post/starganv1/Untitled_1.png" title="image" >}}
 
 # Star Generative Adversarial Networks
 
-![/public/img/starganv1/Untitled_2.png](https://jjerry-k.github.io/public/img/starganv1/Untitled_2.png)
+{{< figure src="/images/post/starganv1/Untitled_2.png" title="image" >}}
 
 # Loss functions
 
@@ -68,12 +68,12 @@ $$\lambda_{cls} = 1, \lambda_{rec} = 10$$
 
 # Result
 
-![/public/img/starganv1/Untitled_3.png](https://jjerry-k.github.io/public/img/starganv1/Untitled_3.png)
+{{< figure src="/images/post/starganv1/Untitled_3.png" title="image" >}}
 
-![/public/img/starganv1/Untitled_4.png](https://jjerry-k.github.io/public/img/starganv1/Untitled_4.png)
+{{< figure src="/images/post/starganv1/Untitled_4.png" title="image" >}}
 
 # Training Detail
 
-![/public/img/starganv1/Untitled_5.png](https://jjerry-k.github.io/public/img/starganv1/Untitled_5.png)
+{{< figure src="/images/post/starganv1/Untitled_5.png" title="image" >}}
 
-![/public/img/starganv1/Untitled_6.png](https://jjerry-k.github.io/public/img/starganv1/Untitled_6.png)
+{{< figure src="/images/post/starganv1/Untitled_6.png" title="image" >}}

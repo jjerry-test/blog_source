@@ -72,9 +72,9 @@ and Molecular Medical Imaging, Fudan University, Shanghai 200433, China
 - 하지만 최근까지 제안된 Network는 대부분 2D image에 대한 upscaling.
 - 몇몇 Network는 3D image로 확장했지만 그렇게 효과를 보지 못했음.
 - 이 논문의 Flow
-![image](/images/post/thin/fig01.PNG)
+{{< figure src="![image](/images/post/thin/fig01.PNG)" title="image" >}}
 
-![image](/images/post/thin/fig02.PNG)
+{{< figure src="![image](/images/post/thin/fig02.PNG)" title="image" >}}
 
 ### B. Network Architecture
 - First stage는 3D-Y-Net-GAN 으로 Thick MRI를 Thin MRI로 생성 후 3D-DenseU-Net으로 recalibration.
@@ -84,7 +84,7 @@ and Molecular Medical Imaging, Fudan University, Shanghai 200433, China
 - Output : Thin MRI
 - r : Upscaling Factor ( r = 8 일 경우의 예시 )
 
-![image](/images/post/thin/fig03.PNG)
+{{< figure src="![image](/images/post/thin/fig03.PNG)" title="image" >}}
 
 - Feature Extraction Branches
   - 각 input에 대한 feature 추출.
@@ -107,14 +107,14 @@ and Molecular Medical Imaging, Fudan University, Shanghai 200433, China
   - Upsampling layer 3개를 연속으로 붙여서 8배 확장하는 구조 대신에 Multipath upscaling strategy 적용. **-> Artifact 완화 효과...?**
 
 - Discriminator
-![image](/images/post/thin/fig04.PNG)
+{{< figure src="![image](/images/post/thin/fig04.PNG)" title="image" >}}
 
   - Axial Image, Saggital Image, Combination Image 가 Real Pair인지 Fake Pair인지 감별.
   - Input : ($I^A$, $I^Y$, $I^S$), ($I^A$, $I^{GT}$, $I^S$)
   - Output : Real, Fake
 
 #### 3D-DenseU-Net
-![image](/images/post/thin/fig05.PNG)
+{{< figure src="![image](/images/post/thin/fig05.PNG)" title="image" >}}
 
 - 전체적인 구조는 U-Net이지만 2개의 Enhanced residual block 을 적용하여 detail recalibration.
 - Input :  $I^Y$, $I^S$, $I^{YA}$ **-> 어떻게 3개가 input으로...?**
@@ -222,7 +222,7 @@ $$
 
 -  총 154 samples의 2~5세 유아 Axial, Sagittal Thick MRI, Axial Thin MRI
 
-![image](/images/post/thin/tab01.PNG)
+{{< figure src="![image](/images/post/thin/tab01.PNG)" title="image" >}}
 
 - Table 1. 과 같은 parameter 사용.
 - Dataset 분할
@@ -291,16 +291,16 @@ $$
 
 #### C. Ablation Experiment On Input Data
 - Input을 변경하면서 실험 진행. 
-![image](/images/post/thin/fig06.PNG)
-![image](/images/post/thin/tab02.PNG)
+{{< figure src="![image](/images/post/thin/fig06.PNG)" title="image" >}}
+{{< figure src="![image](/images/post/thin/tab02.PNG)" title="image" >}}
 - Axial 과 Sagittal 을 같이 사용했을 때가 좀 더 세부적인 구조, 적은 왜곡을 보임.
   - 두 축의 영상이 서로 조합하여 reconstruction task를 향상.
 - Quantitive evaluation 에서도 더 높은 지표를 산출.
 
 #### D. Ablation Experiment On Loss Function
 - Loss를 변경하면서 실험 진행.
-![image](/images/post/thin/fig07.PNG)
-![image](/images/post/thin/tab03.PNG)
+{{< figure src="![image](/images/post/thin/fig07.PNG)" title="image" >}}
+{{< figure src="![image](/images/post/thin/tab03.PNG)" title="image" >}}
 - Self-Adaptive Charbonnier Loss에 비해 $\ell1$ norm 이 흐린 영상을 생성.
 - Without Gradient Correction Loss
   - 덜 선명한 영상을 생성.
@@ -310,8 +310,8 @@ $$
 
 #### E. Comparison With Other  Methods
 - 다른 Method들과 비교.
-![image](/images/post/thin/fig08.PNG)
-![image](/images/post/thin/tab04.PNG)
+{{< figure src="![image](/images/post/thin/fig08.PNG)" title="image" >}}
+{{< figure src="![image](/images/post/thin/tab04.PNG)" title="image" >}}
 - 제안한 method로 생성된 image가 가장 Realistic하고 Ground truth 와 가장 비슷하다고 함.
 - 대부분 Quantitative evaluation 에서 제안한 method가 다른 것들을 다 뛰어넘음.
 

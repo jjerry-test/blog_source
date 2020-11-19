@@ -42,29 +42,29 @@ python -m ipykernel install --user --name {환경이름} --display-name {Jupyter
 
 이렇게 하시면 됩니다. 예시를 직접 보여드리겠습니다. 
 
-![image](/images/post/multi_kernel/01.png)
+{{< figure src="![image](/images/post/multi_kernel/01.png)" title="image" >}}
 
 저는 base 환경만 썼습니다. 가상환경을 가볍게 하나 만들도록 할게요!
 
-![image](/images/post/multi_kernel/02.png)
+{{< figure src="![image](/images/post/multi_kernel/02.png)" title="image" >}}
 
 `test`라는 가상환경을 만들었습니다. 먼저 **kernel을 추가하지 않고** jupyter notebook을 실행해보겠습니다.  
 
-![image](/images/post/multi_kernel/03.png)
-![image](/images/post/multi_kernel/04.png)
+{{< figure src="![image](/images/post/multi_kernel/03.png)" title="image" >}}
+{{< figure src="![image](/images/post/multi_kernel/04.png)" title="image" >}}
 
 첫번째 사진을 보시면 **Python 3** 만 나오는걸 보실 수 있습니다. 저 **Python 3** 는 base의 Python을 가리킵니다.  
 base에는 제가 tensorflow를 설치해놨기 때문에 import 가 잘 작동하는군요..  
 그럼 kernel을 추가해보겠습니다.  (일단 test 환경에 ipython 이 안깔려있어서 설치함..)
 
-![image](/images/post/multi_kernel/05.png)
-![image](/images/post/multi_kernel/06.png)
+{{< figure src="![image](/images/post/multi_kernel/05.png)" title="image" >}}
+{{< figure src="![image](/images/post/multi_kernel/06.png)" title="image" >}}
 
 커널을 추가하고 나면 `Installed ~~~~` 라는 메세지를 보실 수 있어요!  
 그럼 다시 base로 돌아가서 jupyter notebook을 실행해보겠습니다.
 
-![image](/images/post/multi_kernel/07.png)
-![image](/images/post/multi_kernel/08.png)
+{{< figure src="![image](/images/post/multi_kernel/07.png)" title="image" >}}
+{{< figure src="![image](/images/post/multi_kernel/08.png)" title="image" >}}
 
 첫번째 사진을 보시면 추가하기 전과는 다르게 **test** 라는 항목이 추가되었습니다!  
 실행을 해봐도 tensorflow 모듈이 없다고 나오는걸 확인하실 수 있습니다!  

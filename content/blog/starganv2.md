@@ -39,13 +39,13 @@ URL: https://arxiv.org/abs/1912.01865
 - Domain: 시각적으로 구별되는 범주
 - Style: 각 영상이 가지는 독특한 외관적 특성
 
-![https://jjerry-k.github.io/public/img/starganv2/Untitled.png](https://jjerry-k.github.io/public/img/starganv2/Untitled.png)
+{{< figure src="/images/post/starganv2/Untitled.png" title="image" >}}
 
 # StarGAN v2
 
 ## Proposed framework
 
-![https://jjerry-k.github.io/public/img/starganv2/Untitled_1.png](https://jjerry-k.github.io/public/img/starganv2/Untitled_1.png)
+{{< figure src="/images/post/starganv2/Untitled_1.png" title="image" >}}
 
 - 4개의 Network 로 구성.
 - Generator (`G`)
@@ -125,36 +125,36 @@ $$\mathcal{L}_{cyc}=\mathbb{E}_{\mathrm{x}, y, \tilde{y}, \mathrm{z}}[\parallel 
 - StarGAN에서 본 연구에서 제안하는 방법들을 하나하나 넣어가면서 성능 실험.
 - 정량적 평가를 보면 추가할 때마다 좋아지는 것을 볼 수 있음.
 
-![https://jjerry-k.github.io/public/img/starganv2/Untitled_5.png](https://jjerry-k.github.io/public/img/starganv2/Untitled_5.png)
+{{< figure src="/images/post/starganv2/Untitled_5.png" title="image" >}}
 
 - 각 단계별 생성한 영상의 결과
 
-![https://jjerry-k.github.io/public/img/starganv2/Untitled_6.png](https://jjerry-k.github.io/public/img/starganv2/Untitled_6.png)
+{{< figure src="/images/post/starganv2/Untitled_6.png" title="image" >}}
 
 ## Comparison on diverse image synthesis
 
 - 다른 방법들과 비교
 - Latent-guided synthesis ( Latent code 만을 이용하여 생성 )
 
-![https://jjerry-k.github.io/public/img/starganv2/Untitled_7.png](https://jjerry-k.github.io/public/img/starganv2/Untitled_7.png)
+{{< figure src="/images/post/starganv2/Untitled_7.png" title="image" >}}
 
-![https://jjerry-k.github.io/public/img/starganv2/Untitled_8.png](https://jjerry-k.github.io/public/img/starganv2/Untitled_8.png)
+{{< figure src="/images/post/starganv2/Untitled_8.png" title="image" >}}
 
 - Referenc-guided synthesis ( Style code 를 이용한 생성 )
 
-![https://jjerry-k.github.io/public/img/starganv2/Untitled_9.png](https://jjerry-k.github.io/public/img/starganv2/Untitled_9.png)
+{{< figure src="/images/post/starganv2/Untitled_9.png" title="image" >}}
 
-![https://jjerry-k.github.io/public/img/starganv2/Untitled_10.png](https://jjerry-k.github.io/public/img/starganv2/Untitled_10.png)
+{{< figure src="/images/post/starganv2/Untitled_10.png" title="image" >}}
 
 - Human evaluation
     - 방법 별로 100개의 sample 생성 후 사람이 판단.
 
-![https://jjerry-k.github.io/public/img/starganv2/Untitled_11.png](https://jjerry-k.github.io/public/img/starganv2/Untitled_11.png)
+{{< figure src="/images/post/starganv2/Untitled_11.png" title="image" >}}
 
 # Result
 
 - 겁나....잘 생성함...
 
-![https://jjerry-k.github.io/public/img/starganv2/Untitled_12.png](https://jjerry-k.github.io/public/img/starganv2/Untitled_12.png)
+{{< figure src="/images/post/starganv2/Untitled_12.png" title="image" >}}
 
-![https://jjerry-k.github.io/public/img/starganv2/Untitled_13.png](https://jjerry-k.github.io/public/img/starganv2/Untitled_13.png)
+{{< figure src="/images/post/starganv2/Untitled_13.png" title="image" >}}

@@ -74,19 +74,19 @@ netron은 PC에 설치해서 사용하거나 설치없이 Browser 버전으로 �
 
 한번 브라우저 버전을 실행시켜 보았습니다. 
 
-![https://jjerry-k.github.io/public/img/netron/Untitled.png](https://github.com/jjerry-k/jjerry-k.github.io/blob/master/public/img/netron/Untitled.png?raw=true)
+{{< figure src="https://github.com/jjerry-k/jjerry-k.github.io/blob/master/public/img/netron/Untitled.png?raw=true" title="image" >}}
 
 `Open Model` 을 클릭 하신 후 보고 싶은 Network 저장 파일을 선택합니다. 
 
-![https://jjerry-k.github.io/public/img/netron/Untitled_1.png](https://github.com/jjerry-k/jjerry-k.github.io/blob/master/public/img/netron/Untitled_1.png?raw=true)
+{{< figure src="https://github.com/jjerry-k/jjerry-k.github.io/blob/master/public/img/netron/Untitled_1.png?raw=true" title="image" >}}
 
 Network 구조가 차례로 보이네요. 
 
-![https://jjerry-k.github.io/public/img/netron/Untitled_2.png](https://github.com/jjerry-k/jjerry-k.github.io/blob/master/public/img/netron/Untitled_2.png?raw=true)
+{{< figure src="https://github.com/jjerry-k/jjerry-k.github.io/blob/master/public/img/netron/Untitled_2.png?raw=true" title="image" >}}
 
 다음은 keras로 작성된 MobileNetV2 를 netron으로 띄운 후 앞 부분을 잘라낸 사진입니다. 
 
-![https://jjerry-k.github.io/public/img/netron/Untitled_3.png](https://github.com/jjerry-k/jjerry-k.github.io/blob/master/public/img/netron/Untitled_3.png?raw=true)
+{{< figure src="https://github.com/jjerry-k/jjerry-k.github.io/blob/master/public/img/netron/Untitled_3.png?raw=true" title="image" >}}
 
 왼쪽에는 네트워크 구조를 볼 수 있고 만약 레이어를 선택하면 오른쪽에 Node(Layer)에 대한 세부 설정 값들을 확인할 수 있습니다. 
 

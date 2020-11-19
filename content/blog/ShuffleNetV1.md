@@ -41,18 +41,18 @@ URL: https://arxiv.org/abs/1707.01083
 - 상대적으로 연산량이 많은 1x1 Convolution을 ResNeXt 에서 사용한 Group Convolution 으로 적용.
 - 하지만 Group으로 계속 진행하다보면 특정 채널에 편향된 결과를 보이는 문제가 생길 것이므로 channel을 shuffle 해줌.
 
-![https://jjerry-k.github.io/public/img/shufflenetv1/Untitled.png](https://jjerry-k.github.io/public/img/shufflenetv1/Untitled.png)
+{{< figure src="/images/post/shufflenetv1/Untitled.png" title="image" >}}
 
 ## ShuffleNet Unit
 
 - ShuffleNet에서 사용된 Bottle unit은 Xception과 MobileNet에서 사용된 Residual Block에서 1x1 Convolution을 Group Convolution으로 변경하고 Channel Shuffle을 추가한 것.
 - Stride unit 에선 element-wise addition이 아닌 concatenation으로 대체.
 
-![https://jjerry-k.github.io/public/img/shufflenetv1/Untitled_1.png](https://jjerry-k.github.io/public/img/shufflenetv1/Untitled_1.png)
+{{< figure src="/images/post/shufflenetv1/Untitled_1.png" title="image" >}}
 
 ## Network Architecture
 
-![https://jjerry-k.github.io/public/img/shufflenetv1/Untitled_2.png](https://jjerry-k.github.io/public/img/shufflenetv1/Untitled_2.png)
+{{< figure src="/images/post/shufflenetv1/Untitled_2.png" title="image" >}}
 
 # Result
 
@@ -65,42 +65,42 @@ URL: https://arxiv.org/abs/1707.01083
 
 - 무조건 많이 나눈다고 좋은 것은 아님.
 
-![https://jjerry-k.github.io/public/img/shufflenetv1/Untitled_3.png](https://jjerry-k.github.io/public/img/shufflenetv1/Untitled_3.png)
+{{< figure src="/images/post/shufflenetv1/Untitled_3.png" title="image" >}}
 
 ### Channel Shuffle vs. No Shuffle
 
 - Channel Shuffle 여부에 따른 성능 비교.
 - Shuffle 적용시 성능이 뚜렷하게 증가한 것을 확인.
 
-![https://jjerry-k.github.io/public/img/shufflenetv1/Untitled_4.png](https://jjerry-k.github.io/public/img/shufflenetv1/Untitled_4.png)
+{{< figure src="/images/post/shufflenetv1/Untitled_4.png" title="image" >}}
 
 ## Comparison with Other Sturcture Units
 
 - 제한된 연산량 내에서 다른 Network 들과 성능 비교.
 
-![https://jjerry-k.github.io/public/img/shufflenetv1/Untitled_5.png](https://jjerry-k.github.io/public/img/shufflenetv1/Untitled_5.png)
+{{< figure src="/images/post/shufflenetv1/Untitled_5.png" title="image" >}}
 
 - 기존에 비슷한 성능의 Network들과 연산량 비교.
 
-![https://jjerry-k.github.io/public/img/shufflenetv1/Untitled_6.png](https://jjerry-k.github.io/public/img/shufflenetv1/Untitled_6.png)
+{{< figure src="/images/post/shufflenetv1/Untitled_6.png" title="image" >}}
 
 ## Comparison with MobileNets and Other Frameworks
 
 - Mobile devices에 특화된 MobileNet과 성능 비교
 
-![https://jjerry-k.github.io/public/img/shufflenetv1/Untitled_7.png](https://jjerry-k.github.io/public/img/shufflenetv1/Untitled_7.png)
+{{< figure src="/images/post/shufflenetv1/Untitled_7.png" title="image" >}}
 
 ## Generalization Ability
 
 - MS COCO Data를 사용하여 Object detection 성능 비교.
 
-![https://jjerry-k.github.io/public/img/shufflenetv1/Untitled_8.png](https://jjerry-k.github.io/public/img/shufflenetv1/Untitled_8.png)
+{{< figure src="/images/post/shufflenetv1/Untitled_8.png" title="image" >}}
 
 ## Actual Speedup Evaluation
 
 - Mobile device에서 Inference 속도 비교.
 
-![https://jjerry-k.github.io/public/img/shufflenetv1/Untitled_9.png](https://jjerry-k.github.io/public/img/shufflenetv1/Untitled_9.png)
+{{< figure src="/images/post/shufflenetv1/Untitled_9.png" title="image" >}}
 
 ## P.S
 - GPU가 부족해서 했다던 Group Convolution의 부활..?

@@ -54,7 +54,7 @@ sudo apt-get install docker-ce docker-ce-cli containerd.io
 sudo docker run hello-world
 
 # sudo 를 붙이지 않기 위해 사용자 계정을 docker 그룹에 추가
-sudo usermod -aG docker {계정명}
+sudo usermode -aG docker {계정명}
 
 sudo reboot
 ```
@@ -103,9 +103,9 @@ docker pull ubuntu:{원하는 버전 tag}
 docker run -ti ubuntu:{원하는 버전 tag} bash
 ```
 
-![https://jjerry-k.github.io/public/img/Docker_Usage_01/Untitled.png](https://jjerry-k.github.io/public/img/Docker_Usage_01/Untitled.png)
+{{< figure src="/images/post/Docker_Usage_01/Untitled.png" title="image" >}}
 
-![https://jjerry-k.github.io/public/img/Docker_Usage_01/Untitled_1.png](https://jjerry-k.github.io/public/img/Docker_Usage_01/Untitled_1.png)
+{{< figure src="/images/post/Docker_Usage_01/Untitled_1.png" title="image" >}}
 
 ```bash
 # Docker container 에서 실행.
@@ -133,7 +133,7 @@ apt install 부분에서 python 3 중 stable 버전이 설치될 겁니다.
 
 그 결과 마지막 커맨드 (`ls /usr/bin/ | grep python`)를 입력하면 다음과 같이 출력이 나옵니다. 
 
-![https://jjerry-k.github.io/public/img/Docker_Usage_01/Untitled_2.png](https://jjerry-k.github.io/public/img/Docker_Usage_01/Untitled_2.png)
+{{< figure src="/images/post/Docker_Usage_01/Untitled_2.png" title="image" >}}
 
 이렇게 하면 Container에 원하는 환경을 세팅했습니다. 
 
@@ -141,7 +141,7 @@ apt install 부분에서 python 3 중 stable 버전이 설치될 겁니다.
 docker ps -a
 ```
 
-![https://jjerry-k.github.io/public/img/Docker_Usage_01/Untitled_3.png](https://jjerry-k.github.io/public/img/Docker_Usage_01/Untitled_3.png)
+{{< figure src="/images/post/Docker_Usage_01/Untitled_3.png" title="image" >}}
 
 이를 Image로 만들어야 합니다. 
 
@@ -151,7 +151,7 @@ docker images
 docker rmi {컨테이너 이름}
 ```
 
-![https://jjerry-k.github.io/public/img/Docker_Usage_01/Untitled_4.png](https://jjerry-k.github.io/public/img/Docker_Usage_01/Untitled_4.png)
+{{< figure src="/images/post/Docker_Usage_01/Untitled_4.png" title="image" >}}
 
 앞으로는 `docker run -ti --rm {이미지 이름:태그} bash` 와 같이 실행하면 됩니다!
 
@@ -196,7 +196,7 @@ RUN ls /usr/bin/ | grep python
 
 대충 디렉토리를 하나 만들고 위 내용이 담긴 Dockerfile을 만듭니다. 
 
-![https://jjerry-k.github.io/public/img/Docker_Usage_01/Untitled_5.png](https://jjerry-k.github.io/public/img/Docker_Usage_01/Untitled_5.png)
+{{< figure src="/images/post/Docker_Usage_01/Untitled_5.png" title="image" >}}
 
 그리고 Dockerfile이 있는 디렉토리로 이동하여 다음 커맨드를 입력합니다.
 
@@ -204,13 +204,13 @@ RUN ls /usr/bin/ | grep python
 docker build -t {이미지 이름:태그} .
 ```
 
-![https://jjerry-k.github.io/public/img/Docker_Usage_01/Untitled_6.png](https://jjerry-k.github.io/public/img/Docker_Usage_01/Untitled_6.png)
+{{< figure src="/images/post/Docker_Usage_01/Untitled_6.png" title="image" >}}
 
 그럼 다음과 마지막에 다음과 같은 출력이 나오고 `docker images`를 해보면 잘 생성된 것을 볼 수 있습니다. 
 
-![https://jjerry-k.github.io/public/img/Docker_Usage_01/Untitled_7.png](https://jjerry-k.github.io/public/img/Docker_Usage_01/Untitled_7.png)
+{{< figure src="/images/post/Docker_Usage_01/Untitled_7.png" title="image" >}}
 
-![https://jjerry-k.github.io/public/img/Docker_Usage_01/Untitled_8.png](https://jjerry-k.github.io/public/img/Docker_Usage_01/Untitled_8.png)
+{{< figure src="/images/post/Docker_Usage_01/Untitled_8.png" title="image" >}}
 
 ## P.S
 

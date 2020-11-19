@@ -31,9 +31,9 @@ URL: https://arxiv.org/abs/1703.10593
 - 하지만 실제 환경에선 이런 paired data를 구하기 힘듦.
 - 본 논문은 unpaired data 상황에서 Network가 image-to-image 를 잘 학습하는 것에 초점을 맞춤.
 
-![https://jjerry-k.github.io/public/img/cyclegan/Untitled.png](https://jjerry-k.github.io/public/img/cyclegan/Untitled.png)
+{{< figure src="/images/post/cyclegan/Untitled.png" title="image" >}}
 
-![https://jjerry-k.github.io/public/img/cyclegan/Untitled_1.png](https://jjerry-k.github.io/public/img/cyclegan/Untitled_1.png)
+{{< figure src="/images/post/cyclegan/Untitled_1.png" title="image" >}}
 
 # Formulation
 
@@ -59,7 +59,7 @@ $$\mathcal{L}(G, F, D_X, D_Y) = \mathcal{L}_{GAN}(G, D_Y, X, Y) + \mathcal{L}_{G
 
 $$G^*, F^* = argmin_{G, F}argmax_{D_X, D_Y}\mathcal{L}(G, F, D_X, D_Y)$$
 
-![https://jjerry-k.github.io/public/img/cyclegan/Untitled_2.png](https://jjerry-k.github.io/public/img/cyclegan/Untitled_2.png)
+{{< figure src="/images/post/cyclegan/Untitled_2.png" title="image" >}}
 
 # Implementation
 
@@ -76,11 +76,11 @@ $$G^*, F^* = argmin_{G, F}argmax_{D_X, D_Y}\mathcal{L}(G, F, D_X, D_Y)$$
 
 # Result
 
-![https://jjerry-k.github.io/public/img/cyclegan/Untitled_3.png](https://jjerry-k.github.io/public/img/cyclegan/Untitled_3.png)
+{{< figure src="/images/post/cyclegan/Untitled_3.png" title="image" >}}
 
-![https://jjerry-k.github.io/public/img/cyclegan/Untitled_4.png](https://jjerry-k.github.io/public/img/cyclegan/Untitled_4.png)
+{{< figure src="/images/post/cyclegan/Untitled_4.png" title="image" >}}
 
-![https://jjerry-k.github.io/public/img/cyclegan/Untitled_5.png](https://jjerry-k.github.io/public/img/cyclegan/Untitled_5.png)
+{{< figure src="/images/post/cyclegan/Untitled_5.png" title="image" >}}
 
 ## P.S
 

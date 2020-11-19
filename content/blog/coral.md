@@ -43,13 +43,13 @@ type: "post"
 - Coral Accelerator
 - Webcam
 
-![01.jpg](https://jjerry-k.github.io/public/img/coral/01.png)
+{{< figure src="/images/post/coral/01.png" title="image" >}}
 
 # Step 1. 연결
 
-![02.jpg](https://jjerry-k.github.io/public/img/coral/02.png)
+{{< figure src="/images/post/coral/02.png" title="image" >}}
 
-![03.jpg](https://jjerry-k.github.io/public/img/coral/03.png)
+{{< figure src="/images/post/coral/03.png" title="image" >}}
 
 모두 연결 후 라즈베리파이를 켜면 위 사진과 같이 USB에 흰색 불이 들어옵니다.
 
@@ -81,7 +81,7 @@ type: "post"
 
 여기서 밑줄 친 파일을 이용해서 object detection 을 해볼겁니다! 일단 그 다음 세팅으로 넘어가죠.
 
-![04.png](https://jjerry-k.github.io/public/img/coral/04.png)
+{{< figure src="/images/post/coral/04.png" title="image" >}}
 
     #!/bin/bash
     
@@ -116,7 +116,7 @@ opencv를 이용한 스크립트를 사용하기 위해 필요한 것들을 설�
     --top_k 3 \
     --threshold 0.7
 
-![05.png](https://jjerry-k.github.io/public/img/coral/05.png)
+{{< figure src="/images/post/coral/05.png" title="image" >}}
 
 막 빠를 줄 알았는데 Webcam 의 한계라 그런지... FPS가 낮네요.. 
 

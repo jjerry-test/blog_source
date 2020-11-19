@@ -98,7 +98,7 @@ history = cnn.fit(train_x, train_y, epochs=10, batch_size=batch_size, validation
 ```
 
 어렵지 않습니다. `Build Network` 주석 부분과 `Training Network` 부분에 `batch_size`만 조금 수정해주시면 끝납니다!  
-![img](https://jjerry-k.github.io/public/img/tf_multi_gpu/bob.png)  
+{{< figure src="/images/post/tf_multi_gpu/bob.png) " title="image" >}}
 
 하지만 이렇게 하면 무식하게 GPU의 모든 메모리를 할당합니다.  
 그렇기 떄문에 다음과 같이 코드를 추가하여 `필요한 만큼` 할당하도록 합니다. 

@@ -16,7 +16,7 @@ tags:
   - "Setting"
 
 # post type
-type: "featured"
+type: "post"
 ---
 
 # 지극히 개인이 사용하기 위한 vimrc

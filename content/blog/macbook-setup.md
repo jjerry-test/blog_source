@@ -16,7 +16,7 @@ tags:
   - "Macbook"
 
 # post type
-type: "featured"
+type: "post"
 ---
 
 # After MacOS Install

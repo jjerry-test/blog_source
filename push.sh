@@ -10,7 +10,7 @@ wait
 # blog github upload
 echo "Github Blog uploading..."
 cd public
-git add --all
+git add .
 git commit -m " ${COMMIT_MESSAGE}"
 git push
 echo "Github Blog done..."
@@ -18,7 +18,7 @@ wait
 
 echo "Backup Blog uploading..."
 cd ..
-git add --all
+git add .
 git commit -m " ${COMMIT_MESSAGE}"
 git push
 echo "Backup Blog done..."

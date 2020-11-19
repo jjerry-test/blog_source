@@ -24,7 +24,7 @@ type: "post"
 
 넘나 영롱하다...
 
-![image](/images/post/keyboard/vamilo.png)
+{{< figure src="![image](/images/post/keyboard/vamilo.png)" title="image" >}}
 
 
 이건 타건 영상입니다.  

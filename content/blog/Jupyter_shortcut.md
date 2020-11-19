@@ -61,15 +61,15 @@ Jupyter Lab 에서 단축키로 설정할 수 있는 기능들은 다음과 같�
 
 먼저 Jupyter Lab 을 실행시켜주세요.
 
-![fig1](https://jjerry-k.github.io/public/img/shortcut/fig01.png)
+{{< figure src="/images/post/shortcut/fig01.png" title="image" >}}
 
 **Advanced Setting Editor** 를 클릭해주세요.
 
-![fig2](https://jjerry-k.github.io/public/img/shortcut/fig02.png)  
+{{< figure src="/images/post/shortcut/fig02.png) " title="image" >}}
 
 좌측에 **Keyboard Shortuts** 를 선택해주세요.
 
-![fig3](https://jjerry-k.github.io/public/img/shortcut/fig03.png)
+{{< figure src="/images/post/shortcut/fig03.png" title="image" >}}
 
 여기서 왼쪽의 창은 default setting에 대한 설명이고 오른쪽을 Custom 을 위해 기입하는 부분입니다.  
 
@@ -77,13 +77,13 @@ Jupyter Lab 에서 단축키로 설정할 수 있는 기능들은 다음과 같�
 
 위에 기능에 대해서 링크 올려드렸었죠? 그 깃헙에서 링크에 대한 내용을 먼저 찾아봅니다.
 
-![fig4](https://jjerry-k.github.io/public/img/shortcut/fig04.png)
+{{< figure src="/images/post/shortcut/fig04.png" title="image" >}}
 
 거기서 '{기능 이름}' 부분을 복사해주세요.
 
 그리고 다음과 같이 기입해줍니다.  
 
-![fig5](https://jjerry-k.github.io/public/img/shortcut/fig05.png)
+{{< figure src="/images/post/shortcut/fig05.png" title="image" >}}
 
 그리고 우측 상단에 저장버튼을 누르고 노트북에서 Shift + Command + C 를 눌렀을때 `Restart and Clear` 이 작동하게 됩니다.  
 

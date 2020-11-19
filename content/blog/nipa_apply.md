@@ -44,13 +44,13 @@ type: "post"
 
 - [다운로드 링크](https://aihub.or.kr/sites/default/files/hwp/nomal.hwp)
 
-![Untitled.png](https://jjerry-k.github.io/public/img/nipa_apply/Untitled.png)
+{{< figure src="/images/post/nipa_apply/Untitled.png" title="image" >}}
 
 ### 수시 사용자용 신청서
 
 - [다운로드 링크](https://aihub.or.kr/sites/default/files/hwp/always.hwp)
 
-![Untitled_1.png](https://jjerry-k.github.io/public/img/nipa_apply/Untitled_1.png)
+{{< figure src="/images/post/nipa_apply/Untitled_1.png" title="image" >}}
 
 당연한거지만 일반 사용자가 수시 사용자에 비해 작성해야할 것이 많습니다.  
 
@@ -59,13 +59,13 @@ type: "post"
 신청서를 작성하신 후엔 AIHub 사이트 로그인을 하신 후 `이용신청` 으로 넘어갑니다.  
 그럼 다음과 같은 화면이 나오는데 (수시 사용자 기준) **1~8번 중 해당하는 부분 선택하**고 **개인 정보** 채워주시면 됩니다!  
 
-![Untitled_2.png](https://jjerry-k.github.io/public/img/nipa_apply/Untitled_2.png)
+{{< figure src="/images/post/nipa_apply/Untitled_2.png" title="image" >}}
 
 다 채운 후 이용신청을 누르시면 한.... 하루, 이틀? 정도 후에 메일과 핸드폰으로 문자 안내가 옵니다!  
 메일에는 NIPA 서버 사용방법, 문자에는 관리 페이지 이용 안내가 옵니다.   
 신청이 어렵지 않으니 많이 많이 신청하시고 즐거운 딥러닝 공부, 연구하세요! (홍보 아님)
 
-![go.png](https://jjerry-k.github.io/public/img/nipa_apply/go.png)
+{{< figure src="/images/post/nipa_apply/go.png" title="image" >}}
 
 ## P.S.
 - 중요! ! ! **수시 사용자는 계속 사용하려면 10일마다 연장 신청 해야함. 꼭! 반드시!**

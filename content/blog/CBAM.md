@@ -32,7 +32,7 @@ URL: https://arxiv.org/abs/1807.06521
 - Convolution을 이용하여 channel, spatial information 을 추출하고 섞어서 사용.
 - channel, spatial attention module은 각각 "what", "where"에 대한 정보를 학습할 수 있음.
 
-![https://jjerry-k.github.io/public/img/cbam/Untitled.png](https://jjerry-k.github.io/public/img/cbam/Untitled.png)
+{{< figure src="/images/post/cbam/Untitled.png" title="image" >}}
 
 # Convolutional Block Attention Module
 
@@ -40,7 +40,7 @@ URL: https://arxiv.org/abs/1807.06521
 
 $$F: \text{Input feature map} \\ F':\text{Channel attention module feature map} \\ F'': \text{Spatial attention module feature map} \\ F' = M_c(F)\bigotimes F \\F'' = M_s(F')\bigotimes F'$$
 
-![https://jjerry-k.github.io/public/img/cbam/Untitled_1.png](https://jjerry-k.github.io/public/img/cbam/Untitled_1.png)
+{{< figure src="/images/post/cbam/Untitled_1.png" title="image" >}}
 
 ## Channel attention branch
 
@@ -67,39 +67,39 @@ $$M_s(F)=\sigma(f^{7\times7}([AvgPool(F); MaxPool(F)])) \\ = \sigma(f^{7 \times 
 
 - Pooling 기법별 성능 비교
 
-![https://jjerry-k.github.io/public/img/cbam/Untitled_2.png](https://jjerry-k.github.io/public/img/cbam/Untitled_2.png)
+{{< figure src="/images/post/cbam/Untitled_2.png" title="image" >}}
 
 ## Spatial attention
 
 - Pooling, convolution kernel size 에 따른 성능 비교
 
-![https://jjerry-k.github.io/public/img/cbam/Untitled_3.png](https://jjerry-k.github.io/public/img/cbam/Untitled_3.png)
+{{< figure src="/images/post/cbam/Untitled_3.png" title="image" >}}
 
 ## Arrangement of the channel and spatial attention
 
 - Attention module 순서에 따른 성능 비교
 
-![https://jjerry-k.github.io/public/img/cbam/Untitled_4.png](https://jjerry-k.github.io/public/img/cbam/Untitled_4.png)
+{{< figure src="/images/post/cbam/Untitled_4.png" title="image" >}}
 
 # Result
 
 ### Classification Result on ImageNet-1K
 
-![https://jjerry-k.github.io/public/img/cbam/Untitled_5.png](https://jjerry-k.github.io/public/img/cbam/Untitled_5.png)
+{{< figure src="/images/post/cbam/Untitled_5.png" title="image" >}}
 
-![https://jjerry-k.github.io/public/img/cbam/Untitled_6.png](https://jjerry-k.github.io/public/img/cbam/Untitled_6.png)
+{{< figure src="/images/post/cbam/Untitled_6.png" title="image" >}}
 
-![https://jjerry-k.github.io/public/img/cbam/Untitled_7.png](https://jjerry-k.github.io/public/img/cbam/Untitled_7.png)
+{{< figure src="/images/post/cbam/Untitled_7.png" title="image" >}}
 
 ### Object Detection on MS COCO and VOC 2007
 
-![https://jjerry-k.github.io/public/img/cbam/Untitled_8.png](https://jjerry-k.github.io/public/img/cbam/Untitled_8.png)
+{{< figure src="/images/post/cbam/Untitled_8.png" title="image" >}}
 
-![https://jjerry-k.github.io/public/img/cbam/Untitled_9.png](https://jjerry-k.github.io/public/img/cbam/Untitled_9.png)
+{{< figure src="/images/post/cbam/Untitled_9.png" title="image" >}}
 
 ### Network Visualization with Grad-CAM
 
-![https://jjerry-k.github.io/public/img/cbam/Untitled_10.png](https://jjerry-k.github.io/public/img/cbam/Untitled_10.png)
+{{< figure src="/images/post/cbam/Untitled_10.png" title="image" >}}
 
 ## P.S
 

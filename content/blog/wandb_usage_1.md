@@ -43,11 +43,11 @@ train.sh를 실행하게 되면 위에 적혀있는 pretrined model 만 변경�
 
 각 모델별 loss, acc, val_loss, val_acc graph를 확인할 수 있습니다. 
 
-![https://jjerry-k.github.io/public/img/wandb_usage_1/Untitled.png](https://jjerry-k.github.io/public/img/wandb_usage_1/Untitled.png)
+{{< figure src="/images/post/wandb_usage_1/Untitled.png" title="image" >}}
 
 좌측 상단에 Run 옆을 보시면 테이블 모양 아이콘이 있는데 이를 누르면 다음과 같이 테이블로 정리되어 있는 것을 확인 하실 수 있습니다.
 
-![https://jjerry-k.github.io/public/img/wandb_usage_1/Untitled_1.png](https://jjerry-k.github.io/public/img/wandb_usage_1/Untitled_1.png)
+{{< figure src="/images/post/wandb_usage_1/Untitled_1.png" title="image" >}}
 
 이번 포스팅은 Weights & Biases를 이용하여 모델 별 성능 비교를 해보았습니다. 
 

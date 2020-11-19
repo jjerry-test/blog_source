@@ -69,6 +69,6 @@ cap.release()
 
 흠....코드를 좀 수정해봐야겠습니다..
 
-![output_pose.gif](https://jjerry-k.github.io/public/img/mediapipe/pose_output.gif)
+{{< figure src="/images/post/mediapipe/pose_output.gif" title="image" >}}
 
 

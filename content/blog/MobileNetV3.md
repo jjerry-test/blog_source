@@ -40,7 +40,7 @@ URL: https://arxiv.org/abs/1905.02244
 
 - MobileNetV2의 Inverted residual structure에 [squeeze and excitation](https://arxiv.org/abs/1709.01507) 을 추가.
 
-![https://jjerry-k.github.io/public/img/mobilev3/Untitled.png](https://jjerry-k.github.io/public/img/mobilev3/Untitled.png)
+{{< figure src="/images/post/mobilev3/Untitled.png" title="image" >}}
 
 # **Network Search**
 
@@ -65,7 +65,7 @@ URL: https://arxiv.org/abs/1905.02244
 
 ## **Redesigning Expensive Layers**
 
-![https://jjerry-k.github.io/public/img/mobilev3/Untitled_01.png](https://jjerry-k.github.io/public/img/mobilev3/Untitled_1.png)
+{{< figure src="/images/post/mobilev3/Untitled_1.png" title="image" >}}
 
 ## **Nonlinearities**
 
@@ -77,9 +77,9 @@ URL: https://arxiv.org/abs/1905.02244
 
 2. h-swish 를 deeper layer에서만 사용.
 
-![https://jjerry-k.github.io/public/img/mobilev3/Untitled_03.png](https://jjerry-k.github.io/public/img/mobilev3/Untitled_3.png)
+{{< figure src="/images/post/mobilev3/Untitled_3.png" title="image" >}}
 
-![https://jjerry-k.github.io/public/img/mobilev3/Untitled_04.png](https://jjerry-k.github.io/public/img/mobilev3/Untitled_4.png)
+{{< figure src="/images/post/mobilev3/Untitled_4.png" title="image" >}}
 
 ## **Large squeeze-and-excite**
 
@@ -89,9 +89,9 @@ URL: https://arxiv.org/abs/1905.02244
 
 # Result
 
-![https://jjerry-k.github.io/public/img/mobilev3/Untitled_05.png](https://jjerry-k.github.io/public/img/mobilev3/Untitled_5.png)
+{{< figure src="/images/post/mobilev3/Untitled_5.png" title="image" >}}
 
-![https://jjerry-k.github.io/public/img/mobilev3/Untitled_06.png](https://jjerry-k.github.io/public/img/mobilev3/Untitled_6.png)
+{{< figure src="/images/post/mobilev3/Untitled_6.png" title="image" >}}
 
 ### P.S
 

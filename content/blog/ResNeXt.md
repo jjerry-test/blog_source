@@ -34,7 +34,7 @@ URL: https://arxiv.org/abs/1611.05431
 - 일반적인 Reidual Block과 ResNeXt의 Residual Block 비교.
 - Cardinality = Number of Groups,
 
-![https://jjerry-k.github.io/public/img/resnext/Untitled.png](https://jjerry-k.github.io/public/img/resnext/Untitled.png)
+{{< figure src="/images/post/resnext/Untitled.png" title="image" >}}
 
 # Method
 
@@ -43,7 +43,7 @@ URL: https://arxiv.org/abs/1611.05431
 - 전체적인 구조는 기존의 VGG/ResNet과 같이 일정 Block 을 반복하여 쌓는 구조.
 - 반복되는 블럭은 동일한 hyper parameter 사용.
 
-![https://jjerry-k.github.io/public/img/resnext/Untitled_1.png](https://jjerry-k.github.io/public/img/resnext/Untitled_1.png)
+{{< figure src="/images/post/resnext/Untitled_1.png" title="image" >}}
 
 ## Revisiting Simple Neurons
 
@@ -51,7 +51,7 @@ URL: https://arxiv.org/abs/1611.05431
 
 $$\sum_{i=1}^Dw_ix_i$$
 
-![https://jjerry-k.github.io/public/img/resnext/Untitled_2.png](https://jjerry-k.github.io/public/img/resnext/Untitled_2.png)
+{{< figure src="/images/post/resnext/Untitled_2.png" title="image" >}}
 
 - 기본 뉴런 또한 split-transform-merge (Splitting, Transforming, Aggregating)의 구조를 가짐.
 - Vector X 가 $x_i$로 Splitting, $x_iw_i$로 Transforming, $\sum_{i=1}^D$ 로 Aggregating
@@ -64,9 +64,9 @@ $$\mathcal{F}(x) = \sum_{i=1}^C\mathcal{T}_i(\mathrm{x})$$
 
 - 다른 방식이지만 동일하다는 것을 설명
 
-![https://jjerry-k.github.io/public/img/resnext/Untitled_3.png](https://jjerry-k.github.io/public/img/resnext/Untitled_3.png)
+{{< figure src="/images/post/resnext/Untitled_3.png" title="image" >}}
 
-![https://jjerry-k.github.io/public/img/resnext/Untitled_4.png](https://jjerry-k.github.io/public/img/resnext/Untitled_4.png)
+{{< figure src="/images/post/resnext/Untitled_4.png" title="image" >}}
 
 ## Model Capacity
 
@@ -74,7 +74,7 @@ $$\mathcal{F}(x) = \sum_{i=1}^C\mathcal{T}_i(\mathrm{x})$$
 - 다른 Hyper parameter는 수정하고 싶지 않기 때문에 Residual Block의 Cardinality C와 bottleneck d를 수정
 - Cardinality와 bottleneck d의 관계
 
-![https://jjerry-k.github.io/public/img/resnext/Untitled_5.png](https://jjerry-k.github.io/public/img/resnext/Untitled_5.png)
+{{< figure src="/images/post/resnext/Untitled_5.png" title="image" >}}
 
 # Result
 
@@ -82,42 +82,42 @@ $$\mathcal{F}(x) = \sum_{i=1}^C\mathcal{T}_i(\mathrm{x})$$
 
 - Cardinality를 1~32 씩 증가시키되 complexity 는 유지하도록 설정하고 실험.
 
-![https://jjerry-k.github.io/public/img/resnext/Untitled_6.png](https://jjerry-k.github.io/public/img/resnext/Untitled_6.png)
+{{< figure src="/images/post/resnext/Untitled_6.png" title="image" >}}
 
-![https://jjerry-k.github.io/public/img/resnext/Untitled_7.png](https://jjerry-k.github.io/public/img/resnext/Untitled_7.png)
+{{< figure src="/images/post/resnext/Untitled_7.png" title="image" >}}
 
 - Increasing Cardinality 와  Increasing depth or width 비교
 - Cardinality 의 성능이 더 좋음.
 
-![https://jjerry-k.github.io/public/img/resnext/Untitled_8.png](https://jjerry-k.github.io/public/img/resnext/Untitled_8.png)
+{{< figure src="/images/post/resnext/Untitled_8.png" title="image" >}}
 
 - Residual connections 여부에 따른 비교
 
-![https://jjerry-k.github.io/public/img/resnext/Untitled_9.png](https://jjerry-k.github.io/public/img/resnext/Untitled_9.png)
+{{< figure src="/images/post/resnext/Untitled_9.png" title="image" >}}
 
 - State-of-the-art model 과 비교
 
-![https://jjerry-k.github.io/public/img/resnext/Untitled_10.png](https://jjerry-k.github.io/public/img/resnext/Untitled_10.png)
+{{< figure src="/images/post/resnext/Untitled_10.png" title="image" >}}
 
 ## On ImageNet-5K
 
 - 5000개 클래스에서도 잘 되더라.
 
-![https://jjerry-k.github.io/public/img/resnext/Untitled_11.png](https://jjerry-k.github.io/public/img/resnext/Untitled_11.png)
+{{< figure src="/images/post/resnext/Untitled_11.png" title="image" >}}
 
-![https://jjerry-k.github.io/public/img/resnext/Untitled_12.png](https://jjerry-k.github.io/public/img/resnext/Untitled_12.png)
+{{< figure src="/images/post/resnext/Untitled_12.png" title="image" >}}
 
 ## On CIFAR
 
-![https://jjerry-k.github.io/public/img/resnext/Untitled_13.png](https://jjerry-k.github.io/public/img/resnext/Untitled_13.png)
+{{< figure src="/images/post/resnext/Untitled_13.png" title="image" >}}
 
-![https://jjerry-k.github.io/public/img/resnext/Untitled_14.png](https://jjerry-k.github.io/public/img/resnext/Untitled_14.png)
+{{< figure src="/images/post/resnext/Untitled_14.png" title="image" >}}
 
 ## On COCO object detection
 
 - Faster RCNN에 적용.
 
-![https://jjerry-k.github.io/public/img/resnext/Untitled_15.png](https://jjerry-k.github.io/public/img/resnext/Untitled_15.png)
+{{< figure src="/images/post/resnext/Untitled_15.png" title="image" >}}
 
 ## P.S
 

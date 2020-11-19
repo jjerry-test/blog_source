@@ -33,7 +33,7 @@ URL: https://ai.facebook.com/research/publications/end-to-end-object-detection-w
 - [Transformer](https://arxiv.org/abs/1706.03762) 를 사용.
 - 새로운 Loss function 도입.
 
-![jjerry-k.github.io/public/img/DETR/Untitled.png](https://jjerry-k.github.io/public/img/DETR/Untitled.png)
+{{< figure src="/images/post/DETR/Untitled.png" title="image" >}}
 
 # Related Works
 
@@ -64,7 +64,7 @@ URL: https://ai.facebook.com/research/publications/end-to-end-object-detection-w
 
 - DETR은 크게 두 개의 장점이 있음. → a set prediction loss, a architecture
 
-![jjerry-k.github.io/public/img/DETR/Untitled_1.png](https://jjerry-k.github.io/public/img/DETR/Untitled_1.png)
+{{< figure src="/images/post/DETR/Untitled_1.png" title="image" >}}
 
 ## Object detection set prediction loss
 
@@ -110,17 +110,17 @@ $$\lambda_{iou}\mathcal{L}_{iou}(b_i, \hat{b}_{\sigma(i)}) + \lambda_{\mathrm{L}
 
 ## Comparison with Faster R-CNN
 
-![jjerry-k.github.io/public/img/DETR/Untitled_2.png](https://jjerry-k.github.io/public/img/DETR/Untitled_2.png)
+{{< figure src="/images/post/DETR/Untitled_2.png" title="image" >}}
 
 ## Ablations
 
-![jjerry-k.github.io/public/img/DETR/Untitled_3.png](https://jjerry-k.github.io/public/img/DETR/Untitled_3.png)
+{{< figure src="/images/post/DETR/Untitled_3.png" title="image" >}}
 
-![jjerry-k.github.io/public/img/DETR/Untitled_4.png](https://jjerry-k.github.io/public/img/DETR/Untitled_4.png)
+{{< figure src="/images/post/DETR/Untitled_4.png" title="image" >}}
 
 ## Panoptic segmentation
 
-![jjerry-k.github.io/public/img/DETR/Untitled_5.png](https://jjerry-k.github.io/public/img/DETR/Untitled_5.png)
+{{< figure src="/images/post/DETR/Untitled_5.png" title="image" >}}
 
 
 

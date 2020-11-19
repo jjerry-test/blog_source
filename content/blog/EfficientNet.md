@@ -31,7 +31,7 @@ URL: https://arxiv.org/abs/1905.11946
 - 본 논문에서는 ConvNet의 성능과 효율성을 증가시키기 위한 원론적인 방법에 대한 연구.
 - 실험의 결과로 ***Compound scaling method*** 를 제안.
 
-![https://jjerry-k.github.io/public/img/efficientnet/Untitled.png](https://jjerry-k.github.io/public/img/efficientnet/Untitled.png)
+{{< figure src="/images/post/efficientnet/Untitled.png" title="image" >}}
 
 # Compound Model Scaling
 
@@ -66,7 +66,7 @@ $${max}_{d, w, r} Accuracy(\mathcal{N}(d, w, r)) \\ s.t. \mathcal{N}(d, w, r) = 
 
 - 클수록 더 양질의 패턴을 찾을 수 있음.
 
-![https://jjerry-k.github.io/public/img/efficientnet/Untitled_1.png](https://jjerry-k.github.io/public/img/efficientnet/Untitled_1.png)
+{{< figure src="/images/post/efficientnet/Untitled_1.png" title="image" >}}
 
 - Observation 1: 이를 통해서 어떤 요소를 증가시키던 성능이 오르는 것을 확인 하지만 Model이 무거워짐.
 
@@ -75,7 +75,7 @@ $${max}_{d, w, r} Accuracy(\mathcal{N}(d, w, r)) \\ s.t. \mathcal{N}(d, w, r) = 
 - 경험적으로 세 요소가 dependent 하다는 것을 이미 알고 있음.
 - 다른 depth, resolution 을 이용하여 성능 비교.
 
-![https://jjerry-k.github.io/public/img/efficientnet/Untitled_2.png](https://jjerry-k.github.io/public/img/efficientnet/Untitled_2.png)
+{{< figure src="/images/post/efficientnet/Untitled_2.png" title="image" >}}
 
 - Observation 2: 세 요소의 balance가 매우 중요..
 - 다음과 같은 compound scaling method 제안.
@@ -86,7 +86,7 @@ $$\phi: \text{Compound Coefficient} \\ depth: d = \alpha^\phi \\ width: w = \bet
 
 # EfficientNet Architecture
 
-![https://jjerry-k.github.io/public/img/efficientnet/Untitled_3.png](https://jjerry-k.github.io/public/img/efficientnet/Untitled_3.png)
+{{< figure src="/images/post/efficientnet/Untitled_3.png" title="image" >}}
 
 - EfficientNet-B0 를 baseline network로 하여  Accuracy, FLOPS 둘 다 최적화하도록 multi-objective neural architecture search 적용.
     - Step 1
@@ -104,7 +104,7 @@ $$\phi: \text{Compound Coefficient} \\ depth: d = \alpha^\phi \\ width: w = \bet
 - Compound scale 을 증명하기 위해 MobileNet과 ResNet을 이용하여 비교.
 - 기존의 방법들은 3개중 1개의 요소만 scaling.
 
-![https://jjerry-k.github.io/public/img/efficientnet/Untitled_4.png](https://jjerry-k.github.io/public/img/efficientnet/Untitled_4.png)
+{{< figure src="/images/post/efficientnet/Untitled_4.png" title="image" >}}
 
 ## ImageNet Result for EfficientNet
 
@@ -128,41 +128,41 @@ $$\phi: \text{Compound Coefficient} \\ depth: d = \alpha^\phi \\ width: w = \bet
 - B0부터 B7 까지 성능 비교.
 - GPipe에 비해 **8.4배 적고 좋은 성능.**
 
-![https://jjerry-k.github.io/public/img/efficientnet/Untitled_5.png](https://jjerry-k.github.io/public/img/efficientnet/Untitled_5.png)
+{{< figure src="/images/post/efficientnet/Untitled_5.png" title="image" >}}
 
 - CPU를 이용한 Inference 속도 비교.
 
-![https://jjerry-k.github.io/public/img/efficientnet/Untitled_6.png](https://jjerry-k.github.io/public/img/efficientnet/Untitled_6.png)
+{{< figure src="/images/post/efficientnet/Untitled_6.png" title="image" >}}
 
 - 모델별 FLOPS-Accuracy curve
 
-![https://jjerry-k.github.io/public/img/efficientnet/Untitled_7.png](https://jjerry-k.github.io/public/img/efficientnet/Untitled_7.png)
+{{< figure src="/images/post/efficientnet/Untitled_7.png" title="image" >}}
 
 ## Transfer Learning Result for EfficientNet
 
 - ImageNet pretrained model 을 이용하여 각종 Dataset을 Transfer learning 한 성능 비교
 - 사용한 Dataset
 
-![https://jjerry-k.github.io/public/img/efficientnet/Untitled_8.png](https://jjerry-k.github.io/public/img/efficientnet/Untitled_8.png)
+{{< figure src="/images/post/efficientnet/Untitled_8.png" title="image" >}}
 
 - Transfer learning 결과
 - 전체적으로 모델이 가벼움.
 
-![https://jjerry-k.github.io/public/img/efficientnet/Untitled_9.png](https://jjerry-k.github.io/public/img/efficientnet/Untitled_9.png)
+{{< figure src="/images/post/efficientnet/Untitled_9.png" title="image" >}}
 
 - 기존의 모델들과 비교하여 가볍지만 뛰어난 성능을 보임.
 
-![https://jjerry-k.github.io/public/img/efficientnet/Untitled_10.png](https://jjerry-k.github.io/public/img/efficientnet/Untitled_10.png)
+{{< figure src="/images/post/efficientnet/Untitled_10.png" title="image" >}}
 
 # Discussion
 
 - EfficientNet-B0 를 이용하여 각기 다른 scaling method를 이용하여 성능 비교
 
-![https://jjerry-k.github.io/public/img/efficientnet/Untitled_11.png](https://jjerry-k.github.io/public/img/efficientnet/Untitled_11.png)
+{{< figure src="/images/post/efficientnet/Untitled_11.png" title="image" >}}
 
-![https://jjerry-k.github.io/public/img/efficientnet/Untitled_12.png](https://jjerry-k.github.io/public/img/efficientnet/Untitled_12.png)
+{{< figure src="/images/post/efficientnet/Untitled_12.png" title="image" >}}
 
-![https://jjerry-k.github.io/public/img/efficientnet/Untitled_13.png](https://jjerry-k.github.io/public/img/efficientnet/Untitled_13.png)
+{{< figure src="/images/post/efficientnet/Untitled_13.png" title="image" >}}
 
 ## P.S
 

@@ -33,7 +33,7 @@ URL: https://arxiv.org/abs/1905.04899
 - 그 외에도 일부분을 0으로 채운다거나 노이즈로 채우는 방법, 정보가 있는 부분의 pixel을 줄이는 방법 등이 성능 향상을 보였으나 CNN은 데이터가 많이 고픈데....데이터를 없앤다..? 라는 부분에서 의문을 가짐.
 - 영상의 일부를 자르고 다른 영상으로 대체하는 CutMix 를 제안.
 
-![https://jjerry-k.github.io/public/img/cutmix/Untitled.png](https://jjerry-k.github.io/public/img/cutmix/Untitled.png)
+{{< figure src="/images/post/cutmix/Untitled.png" title="image" >}}
 
 # CutMix
 
@@ -59,15 +59,15 @@ $$\mathrm{B}: \text{Bounding box coordinates }  (r_x, r_y, r_w, r_h) \\ r_x \sim
 
 - CutMix를 이용했을 때 CNN이 어느 부분을 학습하는지 확인.
 
-![https://jjerry-k.github.io/public/img/cutmix/Untitled_1.png](https://jjerry-k.github.io/public/img/cutmix/Untitled_1.png)
+{{< figure src="/images/post/cutmix/Untitled_1.png" title="image" >}}
 
 - 다른 method와 비교하여 CutMix의 주요 차이점.
 
-![https://jjerry-k.github.io/public/img/cutmix/Untitled_2.png](https://jjerry-k.github.io/public/img/cutmix/Untitled_2.png)
+{{< figure src="/images/post/cutmix/Untitled_2.png" title="image" >}}
 
 - Validation Error를 비교했을 때 기존의 모델에 비해 CutMix 적용시 Error가 낮음.
 
-![https://jjerry-k.github.io/public/img/cutmix/Untitled_3.png](https://jjerry-k.github.io/public/img/cutmix/Untitled_3.png)
+{{< figure src="/images/post/cutmix/Untitled_3.png" title="image" >}}
 
 # Experiments
 
@@ -77,31 +77,31 @@ $$\mathrm{B}: \text{Bounding box coordinates }  (r_x, r_y, r_w, r_h) \\ r_x \sim
 
 - Baseline, 다른 augmentation method와 비교
 
-![https://jjerry-k.github.io/public/img/cutmix/Untitled_4.png](https://jjerry-k.github.io/public/img/cutmix/Untitled_4.png)
+{{< figure src="/images/post/cutmix/Untitled_4.png" title="image" >}}
 
 - 두 Model에 CutMix를 적용하여 성능 비교.
 
-![https://jjerry-k.github.io/public/img/cutmix/Untitled_5.png](https://jjerry-k.github.io/public/img/cutmix/Untitled_5.png)
+{{< figure src="/images/post/cutmix/Untitled_5.png" title="image" >}}
 
 ### CIFAR Classification
 
 - 다른 Regularization 들과 비교.
 
-![https://jjerry-k.github.io/public/img/cutmix/Untitled_6.png](https://jjerry-k.github.io/public/img/cutmix/Untitled_6.png)
+{{< figure src="/images/post/cutmix/Untitled_6.png" title="image" >}}
 
 - 가벼운 Model 에 적용하여 비교.
 
-![https://jjerry-k.github.io/public/img/cutmix/Untitled_7.png](https://jjerry-k.github.io/public/img/cutmix/Untitled_7.png)
+{{< figure src="/images/post/cutmix/Untitled_7.png" title="image" >}}
 
 - CIFAR-10에 적용한 결과.
 
-![https://jjerry-k.github.io/public/img/cutmix/Untitled_8.png](https://jjerry-k.github.io/public/img/cutmix/Untitled_8.png)
+{{< figure src="/images/post/cutmix/Untitled_8.png" title="image" >}}
 
 ### Ablation Studies
 
 - **CutMix 에서 alpha가 뭐지.......**
 
-![https://jjerry-k.github.io/public/img/cutmix/Untitled_9.png](https://jjerry-k.github.io/public/img/cutmix/Untitled_9.png)
+{{< figure src="/images/post/cutmix/Untitled_9.png" title="image" >}}
 
 - CutMix하는 방법을 다양하게 적용했을 때 성능 비교
 - Center Gaussian: Uniform distribution → Gaussian distribution
@@ -110,42 +110,42 @@ $$\mathrm{B}: \text{Bounding box coordinates }  (r_x, r_y, r_w, r_h) \\ r_x \sim
 - One-hot: 패치 비율에 따라 Portion label이 아닌 One-hot encoding으로 적용
 - Complete-label: lambda 를 고려하지 않고 $y = 0.5y_A + 0.5y_B$로 적용
 
-![https://jjerry-k.github.io/public/img/cutmix/Untitled_10.png](https://jjerry-k.github.io/public/img/cutmix/Untitled_10.png)
+{{< figure src="/images/post/cutmix/Untitled_10.png" title="image" >}}
 
 ## Weakly Supervised Object Localization
 
 - Localization 부분에 대해 다른 방법들과 비교.
 - 학습 후 CAM을 이용해서 bounding box를 그린 것으로 보임.
 
-![https://jjerry-k.github.io/public/img/cutmix/Untitled_11.png](https://jjerry-k.github.io/public/img/cutmix/Untitled_11.png)
+{{< figure src="/images/post/cutmix/Untitled_11.png" title="image" >}}
 
-![https://jjerry-k.github.io/public/img/cutmix/Untitled_12.png](https://jjerry-k.github.io/public/img/cutmix/Untitled_12.png)
+{{< figure src="/images/post/cutmix/Untitled_12.png" title="image" >}}
 
 ## Transfer Learning of Pretrained Model
 
 - Object detection, Image captioning 에 적용하여 성능 비교.
 
-![https://jjerry-k.github.io/public/img/cutmix/Untitled_13.png](https://jjerry-k.github.io/public/img/cutmix/Untitled_13.png)
+{{< figure src="/images/post/cutmix/Untitled_13.png" title="image" >}}
 
 ## Robustness and Uncertainty
 
 - Adversarial attack 에 대해 Accuracy 비교.
 - [Fast Gradient Sign Method (FGSM)](https://arxiv.org/abs/1412.6572)을 이용하여 adversarial perturbation 생성.
 
-![https://jjerry-k.github.io/public/img/cutmix/Untitled_14.png](https://jjerry-k.github.io/public/img/cutmix/Untitled_14.png)
+{{< figure src="/images/post/cutmix/Untitled_14.png" title="image" >}}
 
 - Occlusion 상황에 대해서 성능 비교.
 - 가운데 부분 혹은 Boundary 에 0~224 크기 사이의 hole을 생성.
 
-![https://jjerry-k.github.io/public/img/cutmix/Untitled_15.png](https://jjerry-k.github.io/public/img/cutmix/Untitled_15.png)
+{{< figure src="/images/post/cutmix/Untitled_15.png" title="image" >}}
 
 - Uncertainty
 
-![https://jjerry-k.github.io/public/img/cutmix/Untitled_16.png](https://jjerry-k.github.io/public/img/cutmix/Untitled_16.png)
+{{< figure src="/images/post/cutmix/Untitled_16.png" title="image" >}}
 
 ## CutMix Algorithm
 
-![https://jjerry-k.github.io/public/img/cutmix/Untitled_17.png](https://jjerry-k.github.io/public/img/cutmix/Untitled_17.png)
+{{< figure src="/images/post/cutmix/Untitled_17.png" title="image" >}}
 
 ## P.S
 

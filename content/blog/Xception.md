@@ -93,7 +93,7 @@ URL: https://arxiv.org/abs/1610.02357
 
 # **3. The Xception architecture**
 
-![https://jjerry-k.github.io/public/img/xception/Untitled_4.png](https://jjerry-k.github.io/public/img/xception/Untitled_4.png)
+{{< figure src="/images/post/xception/Untitled_4.png" title="image" >}}
 
 - Figure 5 와 같은 구조 제안.
 - 처음과 마지막을 제외하곤 linear residual module 사용.
@@ -165,7 +165,7 @@ URL: https://arxiv.org/abs/1610.02357
 - Residual connection에 대한 ablation study 진행.
 - Residual connection의 중요성을 보여줌.
 
-![https://jjerry-k.github.io/public/img/xception/Untitled_11.png](https://jjerry-k.github.io/public/img/xception/Untitled_11.png)
+{{< figure src="/images/post/xception/Untitled_11.png" title="image" >}}
 
 ### **4.7 Effect of an intermediate activation after point wise convolutions**
 

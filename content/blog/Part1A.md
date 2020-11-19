@@ -51,14 +51,14 @@ tips = sns.load_dataset("tips")
 tips.head(5)
 ```  
 위를 실행하면 다음 사진과 같이 출력이 나옵니다.  
-![image](/images/post/sb_part1a/001.png)
+{{< figure src="![image](/images/post/sb_part1a/001.png)" title="image" >}}
 정확히 무슨 데이터인지는 모르겠지만... 어떤 가게의 가계부...? 같습니다.
 총 금액, 팁, 성별, 흡연 여부, 요일, 시간대, 크기(...?) 등의 카테고리가 있네요.  
 그럼 한번 plot 해보겠습니다.  
 ``` python
 sns.relplot(x="total_bill", y="tip", data=tips);
 ```  
-![image](/images/post/sb_part1a/002.png)
+{{< figure src="![image](/images/post/sb_part1a/002.png)" title="image" >}}
 
 다음과 같은 figure가 나오네요!  
 x, y, data에 들어간 의미를 알아볼까요?
@@ -71,7 +71,7 @@ x, y, data에 들어간 의미를 알아볼까요?
 ``` python
 sns.relplot(x="total_bill", y="tip", hue="smoker", data=tips);
 ```  
-![image](/images/post/sb_part1a/003.png)
+{{< figure src="![image](/images/post/sb_part1a/003.png)" title="image" >}}
 
 `x, y, data`는 위랑 다를게 없는데... `hue`라는 옵션이 추가가 되었습니다.  
 `hue='smoke'`라고 흡연 여부에 대해 색상으로 표시를 해줍니다!
@@ -81,12 +81,12 @@ sns.relplot(x="total_bill", y="tip", hue="smoker", data=tips);
 ``` python
 sns.relplot(x="total_bill", y="tip", hue="smoker", style="smoker", data=tips);
 ```  
-![image](/images/post/sb_part1a/004.png)
+{{< figure src="![image](/images/post/sb_part1a/004.png)" title="image" >}}
 
 `style` 옵션이 추가되었어요!
 `style='smoker'`를 추가해주면서 plot 스타일이 추가되었네요!  
 다음 사진은 `style="time"` 옵션을 준거에요!  
-![image](/images/post/sb_part1a/005.png)
+{{< figure src="![image](/images/post/sb_part1a/005.png)" title="image" >}}
 
 **색으로는 흡연여부**를 표시하고 **plot 스타일로는 시간대**를 표시해주네요!  
 
@@ -95,7 +95,7 @@ sns.relplot(x="total_bill", y="tip", hue="smoker", style="smoker", data=tips);
 ```python
 sns.relplot(x="total_bill", y="tip", hue="size", data=tips);
 ```  
-![image](/images/post/sb_part1a/006.png)
+{{< figure src="![image](/images/post/sb_part1a/006.png)" title="image" >}}
 
 이전 예시에선 **Yes** or **No** 였죠.  
 이번 수치에 대해 색별로 의미를 줬습니다!  
@@ -104,7 +104,7 @@ sns.relplot(x="total_bill", y="tip", hue="size", data=tips);
 ```python
 sns.relplot(x="total_bill", y="tip", hue="size", palette="ch:r=-.5,l=.75", data=tips);
 ```  
-![image](/images/post/sb_part1a/007.png)
+{{< figure src="![image](/images/post/sb_part1a/007.png)" title="image" >}}
 
 오...scatter plot의 끝이 보여요...  
 `size` 옵션입니다.
@@ -112,7 +112,7 @@ sns.relplot(x="total_bill", y="tip", hue="size", palette="ch:r=-.5,l=.75", data=
 ```python
 sns.relplot(x="total_bill", y="tip", size="size", data=tips);
 ```  
-![image](/images/post/sb_part1a/008.png)
+{{< figure src="![image](/images/post/sb_part1a/008.png)" title="image" >}}
 
 `size="size"`라고 옵션을 줬어요!  
 plot의 크기에 따라 의미가 나뉘어졌습니다!  
@@ -121,7 +121,7 @@ plot의 크기에 따라 의미가 나뉘어졌습니다!
 ```python
 sns.relplot(x="total_bill", y="tip", size="size", sizes=(15, 200), data=tips);
 ```  
-![image](/images/post/sb_part1a/009.png)
+{{< figure src="![image](/images/post/sb_part1a/009.png)" title="image" >}}
 
 
 ### Emphasizing continuity with line plots
@@ -133,7 +133,7 @@ sns.relplot(x="total_bill", y="tip", size="size", sizes=(15, 200), data=tips);
 df = pd.DataFrame(dict(time=np.arange(500), value=np.random.randn(500).cumsum()))
 df.head(5)
 ```
-![image](/images/post/sb_part1a/010.png)
+{{< figure src="![image](/images/post/sb_part1a/010.png)" title="image" >}}
 
 결과는 사진과 다를 수 있어요!  
 time, value 를 가지고 있다는 거에 초점을 맞추시면 됩니다!  
@@ -148,7 +148,7 @@ time, value 를 가지고 있다는 거에 초점을 맞추시면 됩니다!
 g = sns.relplot(x="time", y="value", kind="line", data=df)
 g.fig.autofmt_xdate()
 ```
-![image](/images/post/sb_part1a/011.png)
+{{< figure src="![image](/images/post/sb_part1a/011.png)" title="image" >}}
 
 위 예시는 x 축이 연속적이지만 시계열 데이터였습니다!  
 만약 연속적이지만 이동경로와 같이 x, y 축 좌표만 가진 데이터라면?  
@@ -157,7 +157,7 @@ g.fig.autofmt_xdate()
 df = pd.DataFrame(np.random.randn(500, 2).cumsum(axis=0), columns=["x", "y"])
 df.head(5)
 ```
-![image](/images/post/sb_part1a/012.png)
+{{< figure src="![image](/images/post/sb_part1a/012.png)" title="image" >}}
 
 이런 위치에 대한 데이터는 `sort = False` 옵션을 줘야합니다!  
 그렇지 않으면 .... x 데이터를 자동으로 sorting 해서 plot 해버립니다..
@@ -165,7 +165,7 @@ df.head(5)
 ```python
 sns.relplot(x="x", y="y", sort=False, kind="line", data=df);
 ```
-![image](/images/post/sb_part1a/013.png)
+{{< figure src="![image](/images/post/sb_part1a/013.png)" title="image" >}}
 
 #### Aggregation and representing uncertainty
 
@@ -177,7 +177,7 @@ sns.relplot(x="x", y="y", sort=False, kind="line", data=df);
 fmri = sns.load_dataset("fmri")
 fmri.head(5)
 ```
-![image](/images/post/sb_part1a/014.png)
+{{< figure src="![image](/images/post/sb_part1a/014.png)" title="image" >}}
 
 fmri data 군요! 일단 무슨 의미인지 잘 모르겠습니다!  
 각 환자별로 timepoint 를 가지고 signal을 가지는건 알겠네요..  
@@ -188,7 +188,7 @@ fmri data 군요! 일단 무슨 의미인지 잘 모르겠습니다!
 ```python
 sns.relplot(x="timepoint", y="signal", kind="line", data=fmri);
 ```
-![image](/images/post/sb_part1a/015.png)
+{{< figure src="![image](/images/post/sb_part1a/015.png)" title="image" >}}
 
 >> "그럼...이런 데이터는 항상 신뢰구간을 같이 봐야하는가?"  
 
@@ -198,7 +198,7 @@ sns.relplot(x="timepoint", y="signal", kind="line", data=fmri);
 ```python
 sns.relplot(x="timepoint", y="signal", ci=None, kind="line", data=fmri);
 ```
-![image](/images/post/sb_part1a/016.png)
+{{< figure src="![image](/images/post/sb_part1a/016.png)" title="image" >}}
 
 또 다른 옵션이 있습니다.  
 데이터가 매우 큰 경우! `ci` 옵션에 표준 편차를 넣어주면 각 timepoint 에서 분산을 표현해줍니다!  
@@ -206,7 +206,7 @@ sns.relplot(x="timepoint", y="signal", ci=None, kind="line", data=fmri);
 ```python
 sns.relplot(x="timepoint", y="signal", kind="line", ci="sd", data=fmri);
 ```
-![image](/images/post/sb_part1a/017.png)
+{{< figure src="![image](/images/post/sb_part1a/017.png)" title="image" >}}
 
 마지막으로... 이런 집계말고 정말 원본 그대로 plot 해보고 싶다면!  
 `estimator=None`이라고 주면 됩니다.  
@@ -214,7 +214,7 @@ sns.relplot(x="timepoint", y="signal", kind="line", ci="sd", data=fmri);
 ```python
 sns.relplot(x="timepoint", y="signal", estimator=None, kind="line", data=fmri);
 ```
-![image](/images/post/sb_part1a/018.png)
+{{< figure src="![image](/images/post/sb_part1a/018.png)" title="image" >}}
 
 #### Plotting subsets of data with semantic mappings
 
@@ -226,7 +226,7 @@ sns.relplot(x="timepoint", y="signal", estimator=None, kind="line", data=fmri);
 ```python
 sns.relplot(x="timepoint", y="signal", hue="event", kind="line", data=fmri);
 ```
-![image](/images/post/sb_part1a/019.png)
+{{< figure src="![image](/images/post/sb_part1a/019.png)" title="image" >}}
 
 그럼...`style`도 추가해보도록 하죠!  
 `hue="region", style="event"`라고 옵션을 줍니다!   
@@ -235,7 +235,7 @@ sns.relplot(x="timepoint", y="signal", hue="event", kind="line", data=fmri);
 ```python
 sns.relplot(x="timepoint", y="signal", hue="region", style="event", kind="line", data=fmri);
 ```
-![image](/images/post/sb_part1a/020.png)
+{{< figure src="![image](/images/post/sb_part1a/020.png)" title="image" >}}
 
 또한 선 스타일과 마커 옵션을 줄 수도 있어요!  
 `dashes=False, markers=True`를 추가해보세요!  
@@ -244,7 +244,7 @@ sns.relplot(x="timepoint", y="signal", hue="region", style="event", kind="line",
 ```python
 sns.relplot(x="timepoint", y="signal", hue="region", style="event", dashes=False, markers=True, kind="line", data=fmri);
 ```
-![image](/images/post/sb_part1a/021.png)
+{{< figure src="![image](/images/post/sb_part1a/021.png)" title="image" >}}
 
 괜히 정보가 많아지면...해석이 겁나 어려워질 수 있습니다..  
 다음과 같이 단순화하는게 좋을 때도 있습니다!  
@@ -252,7 +252,7 @@ sns.relplot(x="timepoint", y="signal", hue="region", style="event", dashes=False
 ```python
 sns.relplot(x="timepoint", y="signal", hue="event", style="event", kind="line", data=fmri);
 ```
-![image](/images/post/sb_part1a/022.png)
+{{< figure src="![image](/images/post/sb_part1a/022.png)" title="image" >}}
 
 필요에 따라 모든 샘플 각각을 plot 해야하기도 하죠..  
 다음 예시는 `event`가 **stim** 인 데이터들을 **subject** 별로 plot을 합니다!  
@@ -261,7 +261,7 @@ sns.relplot(x="timepoint", y="signal", hue="event", style="event", kind="line", 
 ```python
 sns.relplot(x="timepoint", y="signal", hue="region", units="subject", estimator=None, kind="line", data=fmri.query("event == 'stim'"));
 ```
-![image](/images/post/sb_part1a/023.png)
+{{< figure src="![image](/images/post/sb_part1a/023.png)" title="image" >}}
 
 여기서는 Colormap을 조금씩 다뤄보는 구간입니다.  
 다음과 같이 데이터를 load 합니다!  
@@ -271,14 +271,14 @@ sns.relplot(x="timepoint", y="signal", hue="region", units="subject", estimator=
 dots = sns.load_dataset("dots").query("align == 'dots'")
 dots.head(5)
 ```
-![image](/images/post/sb_part1a/024.png)
+{{< figure src="![image](/images/post/sb_part1a/024.png)" title="image" >}}
 
 지금까지 해왔던거 처럼 plot을 해봅니다.
 
 ```python
 sns.relplot(x="time", y="firing_rate", hue="coherence", style="choice", kind="line", data=dots);
 ```
-![image](/images/post/sb_part1a/025.png)
+{{< figure src="![image](/images/post/sb_part1a/025.png)" title="image" >}}
 
 음....근데 위에 사진이 뭔가 부족하다고 느껴집니다.  
 자세히 보시면 그려지는 실선, 점선은 각각 6개인데 표현된 색상은 4개네요...  
@@ -291,7 +291,7 @@ sns.relplot(x="time", y="firing_rate",
             palette=palette,
             kind="line", data=dots);
 ```
-![image](/images/post/sb_part1a/026.png)
+{{< figure src="![image](/images/post/sb_part1a/026.png)" title="image" >}}
 
 또는 다음과 같이 Colormap을 Normalization 할 수도 있죠!  
 
@@ -303,7 +303,7 @@ sns.relplot(x="time", y="firing_rate",
             hue_norm=LogNorm(),
             kind="line", data=dots);
 ```
-![image](/images/post/sb_part1a/027.png)
+{{< figure src="![image](/images/post/sb_part1a/027.png)" title="image" >}}
 
 아니면... 다음과 같이 `size`에 의미를 부여할 수도 있겠죠.  
 
@@ -312,7 +312,7 @@ sns.relplot(x="time", y="firing_rate",
             size="coherence", style="choice",
             kind="line", data=dots);
 ```
-![image](/images/post/sb_part1a/028.png)
+{{< figure src="![image](/images/post/sb_part1a/028.png)" title="image" >}}
 
 여기선 Colormap 변경이 주요 내용이였습니다.  
 그럼 다음과 같이 Colormap도 주면서...`size`를 이용해서 의미를 부여하는 것도 가능하겠죠!?  
@@ -323,7 +323,7 @@ sns.relplot(x="time", y="firing_rate",
            palette=palette,
            kind="line", data=dots);
 ```
-![image](/images/post/sb_part1a/029.png)
+{{< figure src="![image](/images/post/sb_part1a/029.png)" title="image" >}}
 
 
 #### Plotting with date data
@@ -339,13 +339,13 @@ df = pd.DataFrame(dict(time=pd.date_range("2017-1-1", periods=500),
                        value=np.random.randn(500).cumsum()))
 df.head(5)
 ```
-![image](/images/post/sb_part1a/030.png)
+{{< figure src="![image](/images/post/sb_part1a/030.png)" title="image" >}}
 
 ```python
 g = sns.relplot(x="time", y="value", kind="line", data=df)
 g.fig.autofmt_xdate()
 ```
-![image](/images/post/sb_part1a/031.png)
+{{< figure src="![image](/images/post/sb_part1a/031.png)" title="image" >}}
 
 
 ### Showing multiple relationships with facets
@@ -366,7 +366,7 @@ tips.head(5)
 sns.relplot(x="total_bill", y="tip", hue="smoker",
             col="time", data=tips);
 ```
-![image](/images/post/sb_part1a/032.png)
+{{< figure src="![image](/images/post/sb_part1a/032.png)" title="image" >}}
 
 또한 다음과 같이 두 변수에 대해 figure를 나눌 수도 있습니다.  
 `col="region", row="event"`라고 하면 **행**은 **"event"**를 기준으로 **열**은 **"region"**으로 총 4개가 plot 됩니다!  
@@ -379,7 +379,7 @@ sns.relplot(x="timepoint", y="signal", hue="subject",
             col="region", row="event", height=3,
             kind="line", estimator=None, data=fmri);
 ```
-![image](/images/post/sb_part1a/033.png)
+{{< figure src="![image](/images/post/sb_part1a/033.png)" title="image" >}}
 
 **fmri** 데이터의 경우 여러 subject가 있었습니다.  
 그 각각 subject 별로 figure를 만들고 싶을땐...?  
@@ -395,7 +395,7 @@ sns.relplot(x="timepoint", y="signal", hue="event", style="event",
             height=3, aspect=.75, linewidth=2.5,
             kind="line", data=fmri.query("region == 'frontal'"));
 ```
-![image](/images/post/sb_part1a/034.png)
+{{< figure src="![image](/images/post/sb_part1a/034.png)" title="image" >}}
 
 
 여기까지 Part 1의 A 내용이였습니다.  

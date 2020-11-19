@@ -53,17 +53,17 @@ wandb login
 
 그러면 아래와 같은 화면이 나오면서 웹 브라우저가 켜집니다.
 
-![https://jjerry-k.github.io/public/img/wandb/Untitled.png](https://jjerry-k.github.io/public/img/wandb/Untitled.png)
+{{< figure src="/images/post/wandb/Untitled.png" title="image" >}}
 
-![https://jjerry-k.github.io/public/img/wandb/Untitled_1.png](https://jjerry-k.github.io/public/img/wandb/Untitled_1.png)
+{{< figure src="/images/post/wandb/Untitled_1.png" title="image" >}}
 
 Browser 에서 API키를 복사해주해서 Terminal (or 명령 프롬프트) 에 붙여넣기합니다.
 
-![https://jjerry-k.github.io/public/img/wandb/Untitled_2.png](https://jjerry-k.github.io/public/img/wandb/Untitled_2.png)
+{{< figure src="/images/post/wandb/Untitled_2.png" title="image" >}}
 
 그럼 wandb 에 로그인 완료!
 
-![https://jjerry-k.github.io/public/img/wandb/Untitled_3.png](https://jjerry-k.github.io/public/img/wandb/Untitled_3.png)
+{{< figure src="/images/post/wandb/Untitled_3.png" title="image" >}}
 
 # Code 실행
 
@@ -119,7 +119,7 @@ history = mlp.fit(train_x, train_y, epochs=10, batch_size=16,
 하나의 프로젝트에서 한번 실행하면 뭔지 모를 조합의 `Name`으로 실행 상태를 보여줍니다.
 저는 한번만 했기 때문에 `lyric-dream-3` 라는 이름으로 하나만 생겨있습니다.  
 
-![https://jjerry-k.github.io/public/img/wandb/Untitled_4.png](https://jjerry-k.github.io/public/img/wandb/Untitled_4.png)
+{{< figure src="/images/post/wandb/Untitled_4.png" title="image" >}}
 
 `lyric-dream-3` 같이 이름을 클릭해서 무엇을 볼 수 있는지 살펴보겠습니다. 
 
@@ -127,34 +127,34 @@ history = mlp.fit(train_x, train_y, epochs=10, batch_size=16,
 
 Chart 탭에선 loss, epoch, metric 등과 같은 학습 관련 지표를 볼 수 있는 `CHARTS`와 모델 학습에 사용된 시스템을 모니터링 할 수 있는 `SYSTEM`이 있습니다.
 
-![https://jjerry-k.github.io/public/img/wandb/Untitled_5.png](https://jjerry-k.github.io/public/img/wandb/Untitled_5.png)
+{{< figure src="/images/post/wandb/Untitled_5.png" title="image" >}}
 
-![https://jjerry-k.github.io/public/img/wandb/Untitled_6.png](https://jjerry-k.github.io/public/img/wandb/Untitled_6.png)
+{{< figure src="/images/post/wandb/Untitled_6.png" title="image" >}}
 
-![https://jjerry-k.github.io/public/img/wandb/Untitled_7.png](https://jjerry-k.github.io/public/img/wandb/Untitled_7.png)
+{{< figure src="/images/post/wandb/Untitled_7.png" title="image" >}}
 
-![https://jjerry-k.github.io/public/img/wandb/Untitled_8.png](https://jjerry-k.github.io/public/img/wandb/Untitled_8.png)
+{{< figure src="/images/post/wandb/Untitled_8.png" title="image" >}}
 
-![https://jjerry-k.github.io/public/img/wandb/Untitled_9.png](https://jjerry-k.github.io/public/img/wandb/Untitled_9.png)
+{{< figure src="/images/post/wandb/Untitled_9.png" title="image" >}}
 
 ## System 탭
 System 탭에서는 Chart 탭에서 `SYSTEM` 과 동일한 그래프를 보여주네요.
-![https://jjerry-k.github.io/public/img/wandb/Untitled_10.png](https://jjerry-k.github.io/public/img/wandb/Untitled_10.png)
+{{< figure src="/images/post/wandb/Untitled_10.png" title="image" >}}
 
 ## Model 탭
 이름 그대로 학습하는 Model의 graph 구조를 볼 수 있습니다.
-![https://jjerry-k.github.io/public/img/wandb/Untitled_11.png](https://jjerry-k.github.io/public/img/wandb/Untitled_11.png)
+{{< figure src="/images/post/wandb/Untitled_11.png" title="image" >}}
 
 ## Logs 탭
 여기선 학습 로그들이 저장됩니다.
-![https://jjerry-k.github.io/public/img/wandb/Untitled_12.png](https://jjerry-k.github.io/public/img/wandb/Untitled_12.png)
+{{< figure src="/images/post/wandb/Untitled_12.png" title="image" >}}
 
 ## Files 탭
 솔직히 보여주기만 해도 좋지만 저장도 해주면 좋겠죠.  
 Files 탭에는 현재 모델을 돌릴때 사용된 정보, 가장 성능이 좋았을 epoch 의 model, 돌리는 환경에 설치된 package 리스트 등의 정보가 저장됩니다.  
 물론 다운로드 가능!  
 `model-best.h5`는 graph 정보도 저장되어 있기 때문에 다운로드 후 load해서 바로 Inference 가능합니다!
-![https://jjerry-k.github.io/public/img/wandb/Untitled_13.png](https://jjerry-k.github.io/public/img/wandb/Untitled_13.png)
+{{< figure src="/images/post/wandb/Untitled_13.png" title="image" >}}
 
 
 [Weights & Biases](https://www.wandb.com/) 에 대해 정~~~말 간단히 알아봤습니다.  

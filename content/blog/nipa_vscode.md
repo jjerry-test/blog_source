@@ -89,7 +89,7 @@ RUN echo 'root:test' | chpasswd
 
 위 내용들을 vim이나 nano같은 에디터를 이용해서 Dockerfile을 만들어주세요!
 
-![Phttps://jjerry-k.github.io/public/img/nipa_vscode/Untitled.png](https://jjerry-k.github.io/public/img/nipa_vscode/Untitled.png)
+{{< figure src="/images/post/nipa_vscode/Untitled.png" title="image" >}}
 
 그리고 다음과 같이 커맨드를 입력하여 도커 이미지를 build 합니다.
 
@@ -97,13 +97,13 @@ RUN echo 'root:test' | chpasswd
 docker build -t {이미지 이름} .
 ```
 
-![Phttps://jjerry-k.github.io/public/img/nipa_vscode/Untitled_1.png](https://jjerry-k.github.io/public/img/nipa_vscode/Untitled_1.png)
+{{< figure src="/images/post/nipa_vscode/Untitled_1.png" title="image" >}}
 
 뭐 이런 저런 Log 들이 촤라———라락 넘어갈겁니다. 계속 기다려 주세요.... 
 
 `docker images` 를 입력하면 제대로 생성된 것을 볼 수 있습니다!
 
-![Phttps://jjerry-k.github.io/public/img/nipa_vscode/Untitled_2.png](https://jjerry-k.github.io/public/img/nipa_vscode/Untitled_2.png)
+{{< figure src="/images/post/nipa_vscode/Untitled_2.png" title="image" >}}
 
 ## 2. Container 실행
 
@@ -117,7 +117,7 @@ docker run -d -P -v /home/ubuntu/jerry/:/jerry --name {컨테이너 이름} {이
 docker port {컨테이너 이름} 22
 ```
 
-![Phttps://jjerry-k.github.io/public/img/nipa_vscode/Untitled_3.png](https://jjerry-k.github.io/public/img/nipa_vscode/Untitled_3.png)
+{{< figure src="/images/post/nipa_vscode/Untitled_3.png" title="image" >}}
 
 컨테이너를 만들고 해당 컨테이너의 22번 포트 (ssh 포트)가 nipa의 몇번 포트와 연결되어 있는지 출력해줍니다.
 
@@ -127,11 +127,11 @@ docker port {컨테이너 이름} 22
 
 새로운 호스트를 추가해줍니다. 
 
-![Phttps://jjerry-k.github.io/public/img/nipa_vscode/Untitled_4.png](https://jjerry-k.github.io/public/img/nipa_vscode/Untitled_4.png)
+{{< figure src="/images/post/nipa_vscode/Untitled_4.png" title="image" >}}
 
 `ssh root@{NIPA IP} -p {포트 번호}` 라고 입력하고 엔터!
 
-![Phttps://jjerry-k.github.io/public/img/nipa_vscode/Untitled_5.png](https://jjerry-k.github.io/public/img/nipa_vscode/Untitled_5.png)
+{{< figure src="/images/post/nipa_vscode/Untitled_5.png" title="image" >}}
 
 그럼 우하단에 `Host를 추가했습니다!` 와 같이 알림이 뜹니다. 
 
@@ -139,7 +139,7 @@ docker port {컨테이너 이름} 22
 
 비밀번호는 맨 처음에 Dockerfile에서 썼던 비밀번호 입니다!
 
-![Phttps://jjerry-k.github.io/public/img/nipa_vscode/Untitled_6.png](https://jjerry-k.github.io/public/img/nipa_vscode/Untitled_6.png)
+{{< figure src="/images/post/nipa_vscode/Untitled_6.png" title="image" >}}
 
 아마 처음에는 세팅이 오래 걸릴겁니다. 우하단에 알림이 없어질 때까지 기다려주세요 ! 
 
@@ -147,11 +147,11 @@ docker port {컨테이너 이름} 22
 
 저는 아래 4개 플러그인을 설치했어요.
 
-![Phttps://jjerry-k.github.io/public/img/nipa_vscode/Untitled_7.png](https://jjerry-k.github.io/public/img/nipa_vscode/Untitled_7.png)
+{{< figure src="/images/post/nipa_vscode/Untitled_7.png" title="image" >}}
 
 그 후에 테스트 코드를 돌려봅니다. 
 
-![Phttps://jjerry-k.github.io/public/img/nipa_vscode/Untitled_8.png](https://jjerry-k.github.io/public/img/nipa_vscode/Untitled_8.png)
+{{< figure src="/images/post/nipa_vscode/Untitled_8.png" title="image" >}}
 
 정상적으로 잘 작동하네요!
 

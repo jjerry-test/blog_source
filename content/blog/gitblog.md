@@ -44,15 +44,15 @@ type: "post"
 링크에 자신이 원하는 템플릿을 들어가보면 대부분 깃헙 repository 로 연결됩니다.  
 예시로 **템플릿 모음1** 에 있는 `Prologue` 라는 테마를 적용해보겠습니다.
 
-![image](/images/post/gitblog/01.png)
+{{< figure src="![image](/images/post/gitblog/01.png)" title="image" >}}
 
 `Download`를 바로 누르셔도 되고 `Homepage`에 들어가서 `git clone, Download ZIP` 하셔도 상관없습니다.  
 다운로드 받은 후에 알집을 풀어주세요!  
 전 `Home`에 풀었구요.  
 
-![image](/images/post/gitblog/02.png)
+{{< figure src="![image](/images/post/gitblog/02.png)" title="image" >}}
 
-![image](/images/post/gitblog/03.png)
+{{< figure src="![image](/images/post/gitblog/03.png)" title="image" >}}
 
 그 폴더 안에는 이렇게 구성이 되어 있습니다.
 
@@ -71,20 +71,20 @@ OS 별 설치법은 [**여기서**](https://jekyllrb-ko.github.io/docs/installat
 
 다음과 같이 터미널을 열고 압축푼 경로로 이동해줍니다.
 
-![image](/images/post/gitblog/04.png)
+{{< figure src="![image](/images/post/gitblog/04.png)" title="image" >}}
 
 그리고 `bundle install` 이라고 입력합니다.  
 
-![image](/images/post/gitblog/05.png)
+{{< figure src="![image](/images/post/gitblog/05.png)" title="image" >}}
 
 그러면 뭐 이것 저것 설치가 될거에요.
 
-![image](/images/post/gitblog/06.png)
+{{< figure src="![image](/images/post/gitblog/06.png)" title="image" >}}
 
 서버를 열 준비는 끝났습니다.  
 이제 터미널에 `bundle exec jekyll serve` 라고 입력해주세요.
 
-![image](/images/post/gitblog/07.png)
+{{< figure src="![image](/images/post/gitblog/07.png)" title="image" >}}
 
 사진과 같이 나올거에요!  
 밑에 `http://127.0.0.1:4000/jekyll-theme-prologue`라고 나와있네요!  
@@ -92,7 +92,7 @@ OS 별 설치법은 [**여기서**](https://jekyllrb-ko.github.io/docs/installat
 
 그럼 다음과 같은 창이 열립니다.
 
-![image](/images/post/gitblog/08.png)
+{{< figure src="![image](/images/post/gitblog/08.png)" title="image" >}}
 
 이제 블로그를 할 준비는 완료했습니다!  
 다음엔 테마를 토대로 커스터마이징 하는 포스팅을 준비해보겠습니다!

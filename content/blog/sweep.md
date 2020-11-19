@@ -196,17 +196,17 @@ python train.py
 
 그 후에 Weights & Biases 로 가보면 다음과 같이 프로젝트가 만들어진 것을 확인 할 수 있습니다. 
 
-![https://jjerry-k.github.io/public/img/sweep/Untitled.png](https://jjerry-k.github.io/public/img/sweep/Untitled.png)
+{{< figure src="/images/post/sweep/Untitled.png" title="image" >}}
 
 ### 3. sweep configuration
 
 프로젝트 창에서 왼쪽에 **빗자루 모양 아이콘**을 누른 후에 오른쪽 상단에 **Create sweep** 를 눌러줍니다. ****
 
-![https://jjerry-k.github.io/public/img/sweep/Untitled_1.png](https://jjerry-k.github.io/public/img/sweep/Untitled_1.png)
+{{< figure src="/images/post/sweep/Untitled_1.png" title="image" >}}
 
 그러면 다음과 같은 창이 나오는데요. 이제 hyper parameter search를 어떻게 할건지 세팅하는 단계입니다. 
 
-![https://jjerry-k.github.io/public/img/sweep/Untitled_2.png](https://jjerry-k.github.io/public/img/sweep/Untitled_2.png)
+{{< figure src="/images/post/sweep/Untitled_2.png" title="image" >}}
 
 저는 다음과 같이 세팅을 했습니다. 
 
@@ -239,7 +239,7 @@ parameters:
 
 그리고 Initialize Sweep 를 눌러줍니다! 그러면 다음과 같은 화면이 나올거에요!
 
-![https://jjerry-k.github.io/public/img/sweep/Untitled_3.png](https://jjerry-k.github.io/public/img/sweep/Untitled_3.png)
+{{< figure src="/images/post/sweep/Untitled_3.png" title="image" >}}
 
 ### 4. Sweep 실행
 
@@ -253,7 +253,7 @@ wandb agent {sweep-id}
 
 이제 잠시 티타임을...가집니다.. (잠깐이 아닐 수도 있음..)
 
-![https://jjerry-k.github.io/public/img/sweep/Untitled_4.png](https://jjerry-k.github.io/public/img/sweep/Untitled_4.png)
+{{< figure src="/images/post/sweep/Untitled_4.png" title="image" >}}
 
 ### 5. 결과 확인
 
@@ -269,7 +269,7 @@ Weights & Biases 화면에서 **View Sweep** 을 눌러주세요!
 - hyper parameter와 목표 값( 저는 loss ) 간의 중요도, 상관관계
 - 각 학습 별 Parallel graph
 
-![https://jjerry-k.github.io/public/img/sweep/Untitled_5.png](https://jjerry-k.github.io/public/img/sweep/Untitled_5.png)
+{{< figure src="/images/post/sweep/Untitled_5.png" title="image" >}}
 
 이번엔 Hyper parameter tuning을 편하게 할 수 있는 Weighs & Biases의 Sweep에 대해 알아봤습니다. 
 

@@ -35,7 +35,7 @@ URL: https://arxiv.org/abs/1807.11164
     - memory access cost(MAC): 메모리 접근량(사용량)
     - depending on the platform
 
-![https://jjerry-k.github.io/public/img/shufflenetv2/Untitled.png](https://jjerry-k.github.io/public/img/shufflenetv2/Untitled.png)
+{{< figure src="/images/post/shufflenetv2/Untitled.png" title="image" >}}
 
 # Practical Guidelines for Ecient Network Design
 
@@ -43,7 +43,7 @@ URL: https://arxiv.org/abs/1807.11164
 - 모델의 Runtime을 쪼개보면 다음과 같은 차트가 그려짐.
 - FLOPs는 Convolution 에 대해 설명하기 떄문에 비교 지표로 적절하지 못함을 강조.
 
-![https://jjerry-k.github.io/public/img/shufflenetv2/Untitled_1.png](https://jjerry-k.github.io/public/img/shufflenetv2/Untitled_1.png)
+{{< figure src="/images/post/shufflenetv2/Untitled_1.png" title="image" >}}
 
 - 위 문제를 근거로 다음과 같이 여러 개의 가이드 라인을 제시.
 
@@ -66,7 +66,7 @@ $$MAC \ge 2\sqrt{hwB} + \frac{B}{hw} \to 2hw\sqrt{c_1c_2} + c_1c_2$$
 - 전체 연산량은 고정해놓고 $c_1:c_2$의 비율을 바꿔가면서 runtime 비교.
 - 1:1일때가 가장 빠른 성능을 보임.
 
-![https://jjerry-k.github.io/public/img/shufflenetv2/Untitled_2.png](https://jjerry-k.github.io/public/img/shufflenetv2/Untitled_2.png)
+{{< figure src="/images/post/shufflenetv2/Untitled_2.png" title="image" >}}
 
 > *It reaches the lower bound when the numbers of input and output channels are equal.*
 
@@ -81,7 +81,7 @@ $$MAC = hw(c_1+c_2) + \frac{c_1c_2}{g} \\ = hwc_1 + hwc_2 + \frac{c_1c_2}{g} \\ 
 
 - Groups 에 따라 runtime 비교.
 
-![https://jjerry-k.github.io/public/img/shufflenetv2/Untitled_3.png](https://jjerry-k.github.io/public/img/shufflenetv2/Untitled_3.png)
+{{< figure src="/images/post/shufflenetv2/Untitled_3.png" title="image" >}}
 
 > *The group number should be carefully chosen based on the target platform and task. It is unwise to use a large group number simply because this may enable using more channels, because the benet of accuracy increase can easily be outweighed by the rapidly increasing computational cost.*
 
@@ -90,9 +90,9 @@ $$MAC = hw(c_1+c_2) + \frac{c_1c_2}{g} \\ = hwc_1 + hwc_2 + \frac{c_1c_2}{g} \\ 
 - Inception 과 같이 여러 branch를 parallel하게 구성할 경우 성능은 좋아졌지만 효율성은 감소시킴. → GPU 같은 자원에는 어울리지 않음.
 - Fragmentation 에 따른 runtime 비교.
 
-![https://jjerry-k.github.io/public/img/shufflenetv2/Untitled_4.png](https://jjerry-k.github.io/public/img/shufflenetv2/Untitled_4.png)
+{{< figure src="/images/post/shufflenetv2/Untitled_4.png" title="image" >}}
 
-![https://jjerry-k.github.io/public/img/shufflenetv2/Untitled_5.png](https://jjerry-k.github.io/public/img/shufflenetv2/Untitled_5.png)
+{{< figure src="/images/post/shufflenetv2/Untitled_5.png" title="image" >}}
 
 > *Fragmented structure has been shown benecial for accuracy, it could decrease eciency because it is unfriendly for devices with strong parallel computing powers like GPU. It also introduces extra overheads such as kernel launching and synchronization.*
 
@@ -104,7 +104,7 @@ $$MAC = hw(c_1+c_2) + \frac{c_1c_2}{g} \\ = hwc_1 + hwc_2 + \frac{c_1c_2}{g} \\ 
 
 - 각 상황에 대한 runtime 비교.
 
-![https://jjerry-k.github.io/public/img/shufflenetv2/Untitled_6.png](https://jjerry-k.github.io/public/img/shufflenetv2/Untitled_6.png)
+{{< figure src="/images/post/shufflenetv2/Untitled_6.png" title="image" >}}
 
 > *We observe around 20% speedup is obtained on both GPU and ARM, after ReLU and shortcut are removed.*
 
@@ -138,7 +138,7 @@ $$MAC = hw(c_1+c_2) + \frac{c_1c_2}{g} \\ = hwc_1 + hwc_2 + \frac{c_1c_2}{g} \\ 
 - G1, G2, G3, G4 모두 지키지 않음.
 - 이를 해결한 구조가 ShuffleNet V2 의 유닛 (Fig 3 (c), Fig 3 (d))
 
-![https://jjerry-k.github.io/public/img/shufflenetv2/Untitled_7.png](https://jjerry-k.github.io/public/img/shufflenetv2/Untitled_7.png)
+{{< figure src="/images/post/shufflenetv2/Untitled_7.png" title="image" >}}
 
 ## Channel Split and ShueNet V2
 
@@ -158,7 +158,7 @@ $$MAC = hw(c_1+c_2) + \frac{c_1c_2}{g} \\ = hwc_1 + hwc_2 + \frac{c_1c_2}{g} \\ 
 
 - 네트워크 구조
 
-![https://jjerry-k.github.io/public/img/shufflenetv2/Untitled_8.png](https://jjerry-k.github.io/public/img/shufflenetv2/Untitled_8.png)
+{{< figure src="/images/post/shufflenetv2/Untitled_8.png" title="image" >}}
 
 ## Analysis of Network Accuracy
 
@@ -169,7 +169,7 @@ $$MAC = hw(c_1+c_2) + \frac{c_1c_2}{g} \\ = hwc_1 + hwc_2 + \frac{c_1c_2}{g} \\ 
 - 붉을 수록 Source layer와 Target layer의 연결성이 강하다는 의미.
 - DenseNet과 같이 ShuffleNet V2에서도 Target layer가 멀어질 수록 연결성이 약함.
 
-![https://jjerry-k.github.io/public/img/shufflenetv2/Untitled_9.png](https://jjerry-k.github.io/public/img/shufflenetv2/Untitled_9.png)
+{{< figure src="/images/post/shufflenetv2/Untitled_9.png" title="image" >}}
 
 # Experiment
 
@@ -179,7 +179,7 @@ $$MAC = hw(c_1+c_2) + \frac{c_1c_2}{g} \\ = hwc_1 + hwc_2 + \frac{c_1c_2}{g} \\ 
     - Xception
     - DenseNet
 
-![https://jjerry-k.github.io/public/img/shufflenetv2/Untitled_10.png](https://jjerry-k.github.io/public/img/shufflenetv2/Untitled_10.png)
+{{< figure src="/images/post/shufflenetv2/Untitled_10.png" title="image" >}}
 
 ### Accuracy vs. FLOPs
 
@@ -189,7 +189,7 @@ $$MAC = hw(c_1+c_2) + \frac{c_1c_2}{g} \\ = hwc_1 + hwc_2 + \frac{c_1c_2}{g} \\ 
 
 - 연산량을 특정 값 범위로 고정시키고 runtime 비교. (Fig 1 참조)
 
-![https://jjerry-k.github.io/public/img/shufflenetv2/Untitled_11.png](https://jjerry-k.github.io/public/img/shufflenetv2/Untitled_11.png)
+{{< figure src="/images/post/shufflenetv2/Untitled_11.png" title="image" >}}
 
 ### Compared with MobileNet v1
 
@@ -211,7 +211,7 @@ $$MAC = hw(c_1+c_2) + \frac{c_1c_2}{g} \\ = hwc_1 + hwc_2 + \frac{c_1c_2}{g} \\ 
 - 50개의 레이어를 가진 모델을 생성해도 ResNet-50 과 비교하여 적은 연산량, 뛰어난 성능을 보임. (Table 6 상단)
 - SE module, residual block을 사용하여 더욱 깊게 만들어도 상대적으로 연산량이 적으면서 뛰어난 성능을 보임. (Table 6 하단)
 
-![https://jjerry-k.github.io/public/img/shufflenetv2/Untitled_12.png](https://jjerry-k.github.io/public/img/shufflenetv2/Untitled_12.png)
+{{< figure src="/images/post/shufflenetv2/Untitled_12.png" title="image" >}}
 
 ### Object Detection
 
@@ -219,7 +219,7 @@ $$MAC = hw(c_1+c_2) + \frac{c_1c_2}{g} \\ = hwc_1 + hwc_2 + \frac{c_1c_2}{g} \\ 
 - Classification 에서 성능이 별로였던 Xception 이 Detection 에선 성능이 좋음. → Receptive Field가 크기 때문이라고 생각.
 - 3x3 depthwise convolution 을 추가하여 Receptive Field를 키워보니 (ShuffleNet V2*) runtime은 늘었으나 성능이 증가함.
 
-![https://jjerry-k.github.io/public/img/shufflenetv2/Untitled_13.png](https://jjerry-k.github.io/public/img/shufflenetv2/Untitled_13.png)
+{{< figure src="/images/post/shufflenetv2/Untitled_13.png" title="image" >}}
 
 ## P.S
 

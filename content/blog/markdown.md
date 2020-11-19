@@ -454,11 +454,11 @@ print(a + b)
 만약 사이즈 조절이 필요하다면 `<img src="" height="" width="">를 이용하면 됩니다.`
 
 ```
-![image](http://octodex.github.com/images/dojocat.jpg)
+<img src="http://octodex.github.com/images/dojocat.jpg" height="100" width="100">
 ```
 
 적용 후 :
-![image](http://octodex.github.com/images/dojocat.jpg)
+<img src="http://octodex.github.com/images/dojocat.jpg" height="100" width="100">
 
 ---
 

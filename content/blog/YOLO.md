@@ -37,7 +37,7 @@ type: "post"
   - R-CNN 계열 : potential bboxes 추출 -> image 에서 bboxes 부분 다시 classify -> Post-processing
 - Slow, Hard to optimize(각 요소별로 따로따로 학습을 해야함. RPN -> Classifier -> RPN -> ...)
   
-![image](/images/post/yolo/fig01.png)
+{{< figure src="![image](/images/post/yolo/fig01.png)" title="image" >}}
 
 - 복잡하지 않은 pipeline과 빠른 inferenc time.
   - 45 fps on a Titan X .
@@ -56,7 +56,7 @@ type: "post"
 - Single Neural Network로 통합.
 - 이미지 전체를 이용해서 각각의 bbox 예측.
 
-![image](/images/post/yolo/fig02.png)
+{{< figure src="![image](/images/post/yolo/fig02.png)" title="image" >}}
 
 
 - 입력 이미지를 S x S grid로 나눔. 
@@ -88,14 +88,14 @@ type: "post"
 
 - 24개의 Convolution layer, 2개의 Fully Connected layer.
 - GoogLeNet의 inception 모듈 대신에 <span style="color:skyblue">1 x 1 Convolution layer를 이용하여 reduction.</span>
-![image](/images/post/yolo/fig03_1.png)
+{{< figure src="![image](/images/post/yolo/fig03_1.png)" title="image" >}}
 - Tiny model은 9개의 Convolution layer, 2개의 Fully Connected layer.
   
 ### 2.2 Training
 - 앞 단의 20개의 Convolution layer(Feature Extractor)를 ImageNet 1000-class competition 데이터(224 x 224)로 Pretrain.
 - 20번째 Convolution layer 뒤에 Average Pooling, Fully Connected Layer.
 - ImageNet 2012 validation set으로 top-5 accuracy 88% 정도..
-![image](/images/post/yolo/fig03_2.png)
+{{< figure src="![image](/images/post/yolo/fig03_2.png)" title="image" >}}
 
 - Pretrain 후 Detector 부분 추가 후 입력 크기를 448 x 448 로 높여서 학습 진행.
 
@@ -160,23 +160,23 @@ $$
 ### 4.1. Comparison to Other RealTime Systems
 - Fast Yolo는 가장 빠른 속도를 보여줌.
 - YOLO 는 real-time 성능을 보여주면서 mAP도 뛰어난걸 확인할 수 있음.
-![image](/images/post/yolo/fig04_1.png)
+{{< figure src="![image](/images/post/yolo/fig04_1.png)" title="image" >}}
 
 ### 4.2. VOC 2007 Error Analysis
 - Object Localization은 Fast R-CNN이 더 뛰어남.
 - But, Background Error(False Positive)가 훨씬 높음.
-![image](/images/post/yolo/fig04_2.png)
+{{< figure src="![image](/images/post/yolo/fig04_2.png)" title="image" >}}
 
 ### 4.3. Combining Fast RCNN and YOLO
 - Fast R-CNN과 YOLO를 앙상블 한 모델이 성능이 가장 좋음. 
-![image](/images/post/yolo/fig04_3.png)
+{{< figure src="![image](/images/post/yolo/fig04_3.png)" title="image" >}}
 
 ### 4.4. VOC 2012 Results
-![image](/images/post/yolo/fig04_4.png)
+{{< figure src="![image](/images/post/yolo/fig04_4.png)" title="image" >}}
 
 ### 4.5 Generalizability
 - 새로운 도메인, 예상치 못한 입력이 들어왔을때 일반화 성능이 뛰어남. 
 - Picasso Dataset 과 People-Art Dataset을 이용하여 다른 모델들과 일반화 성능 비교.
 - YOLO가 가장 성능이 좋은것을 보여줌. 
-![image](/images/post/yolo/fig05_1.png)
-![image](/images/post/yolo/fig05_2.png)
+{{< figure src="![image](/images/post/yolo/fig05_1.png)" title="image" >}}
+{{< figure src="![image](/images/post/yolo/fig05_2.png)" title="image" >}}

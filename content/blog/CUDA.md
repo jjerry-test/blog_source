@@ -3,7 +3,7 @@ title: Ubuntu CUDA & Cudnn 설치하기
 date: 2016-09-08T18:30:46+06:00
 draft: false
 
-# post thumb
+#post thumb
 image: #"images/featured-post/post-1.jpg"
 
 # meta description
@@ -18,7 +18,6 @@ tags:
 # post type
 type: "post"
 ---
-
 # 환경 구축....
 
 Deep Learning을 하는데 GPU를 사용해야하니 CUDA와 cuDNN을 설치하기로 하죠.
@@ -49,7 +48,7 @@ NVIDIA 사이트에서 GPU 버전이랑 맞는걸로!!
 Ctrl + Alt + F1을 눌러 tty1으로 들어가서 로그인 후 reboot을 실행해줍시다.  
 로그인 후 NVIDIA X Server Settings 를 켜면
 
-![image](/images/post/CUDA/01.png)
+{{< figure src="![image](/images/post/CUDA/01.png)" title="image" >}}
 
 요래 설치 된걸 확인할 수 있습니다.
 
@@ -59,7 +58,7 @@ NVIDIA 드라이버를 설치 했으니 이제 CUDA를 설치해보도록 하죠
 
 [https://developer.nvidia.com/cuda-downloads](https://developer.nvidia.com/cuda-downloads) 에 들어가시면 요로코롬 뜨는데요.  
 
- ![image](/images/post/CUDA/02.png)
+ <img src="https://jjerry-k.github.io/public/img/CUDA/02.png">
 
 각자의 환경에 맞춰서 선택한 후 다운로드 하시면 됩니다.  
 run 파일을 다운을 받은 후에 터미널을 여시고 run 파일이 다운로드된 디렉토리로 이동합니다.  

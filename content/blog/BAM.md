@@ -47,7 +47,7 @@ URL: https://arxiv.org/abs/1807.06514
 
 - 본 논문에선 attention 의 효과를 보기 위해 기존의 architecture 에 사용하기 쉬운 가벼운 Bottle Attention Module(BAM) 제안
 
-![https://jjerry-k.github.io/public/img/bam/Untitled.png](https://jjerry-k.github.io/public/img/bam/Untitled.png)
+{{< figure src="/images/post/bam/Untitled.png" title="image" >}}
 
 # Bottleneck Attention Module
 
@@ -55,7 +55,7 @@ URL: https://arxiv.org/abs/1807.06514
 
 $$F: \text{Input feature map} \\ M(F): \text{Attention map} \\F' = F + F\bigotimes M(F) \\ M(F) = \sigma(M_c(F) + M_s(F))$$
 
-![https://jjerry-k.github.io/public/img/bam/Untitled_1.png](https://jjerry-k.github.io/public/img/bam/Untitled_1.png)
+{{< figure src="/images/post/bam/Untitled_1.png" title="image" >}}
 
 ## Channel attention branch
 
@@ -99,27 +99,27 @@ $$M(F) = \sigma(M_c(F) + M_s(F))$$
 - BAM 사용 여부에 따른 성능 비교
 - Table 1 (c)
 
-![https://jjerry-k.github.io/public/img/bam/Untitled_2.png](https://jjerry-k.github.io/public/img/bam/Untitled_2.png)
+{{< figure src="/images/post/bam/Untitled_2.png" title="image" >}}
 
 ## Bottleneck: The efficient point to place BAM
 
 - BAM 사용 위치에 따른 성능 비교.
 
-![https://jjerry-k.github.io/public/img/bam/Untitled_3.png](https://jjerry-k.github.io/public/img/bam/Untitled_3.png)
+{{< figure src="/images/post/bam/Untitled_3.png" title="image" >}}
 
 # Result
 
 ## Classification Result on CIFAR-100 and ImageNet-1K
 
-![https://jjerry-k.github.io/public/img/bam/Untitled_4.png](https://jjerry-k.github.io/public/img/bam/Untitled_4.png)
+{{< figure src="/images/post/bam/Untitled_4.png" title="image" >}}
 
 ## Object Detection on MS COCO and VOC 2007
 
-![https://jjerry-k.github.io/public/img/bam/Untitled_5.png](https://jjerry-k.github.io/public/img/bam/Untitled_5.png)
+{{< figure src="/images/post/bam/Untitled_5.png" title="image" >}}
 
 ## Comparison with Squeeze-and-Excitation
 
-![https://jjerry-k.github.io/public/img/bam/Untitled_6.png](https://jjerry-k.github.io/public/img/bam/Untitled_6.png)
+{{< figure src="/images/post/bam/Untitled_6.png" title="image" >}}
 
 ### P.S
 
