@@ -4,7 +4,7 @@ title = "My New Hugo Site"
 theme = "liva-hugo"
 summaryLength = "10"
 paginate = 6
-disqusShortname = ""
+disqusShortname = "jjerry_k"
 
 [outputs]
   home = ["HTML", "RSS", "JSON"]
@@ -80,12 +80,12 @@ disqusShortname = ""
 logo = "images/logo.png"
 home = "Home"
 # Meta data
-description = "This is meta description"
-author = "Themefisher"
+description = "Private Blog"
+author = "Jerry Kim"
 # Google Analitycs
-googleAnalitycsID = "Your ID"
+googleAnalitycsID = "UA-126636477-1"
 # Contact Information
-# mobile = "0124857985320"
+mobile = "Top Secret"
 email = "jaeyeol2931@gmail.com"
 location = "Seoul, Korea of Republic"
 # copyright
@@ -94,7 +94,7 @@ copyright = "| copyright &copy; 2020 [Themefisher](https://themefisher.com) All 
   # Preloader
   [params.preloader]
   enable = true
-  preloader = "" # use .png , .svg or .gif format
+  preloader = "images/preloader.gif" # use .png , .svg or .gif format
 
   # search
   [params.search]
@@ -104,7 +104,7 @@ copyright = "| copyright &copy; 2020 [Themefisher](https://themefisher.com) All 
 [params.newsletter]
 enable = true
 title = "Join Our Newsletter"
-content = "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero"
+content = "뉴스레터 받으실...?"
 
 
 # cookies
