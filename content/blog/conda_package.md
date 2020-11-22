@@ -8,6 +8,7 @@ image: #"images/featured-post/post-1.jpg"
 
 # meta description
 description: "this is meta description"
+math: true
 
 # taxonomies
 categories:

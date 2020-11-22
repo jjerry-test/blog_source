@@ -8,6 +8,7 @@ image: #"images/featured-post/post-1.jpg"
 
 # meta description
 description: "this is meta description"
+math: true
 
 # taxonomies
 categories:
@@ -69,6 +70,6 @@ cap.release()
 
 흠....코드를 좀 수정해봐야겠습니다..
 
-{{< figure src="/images/post/mediapipe_3/pose_output.gif" title="image" >}}
+{{< figure src="/images/post/mediapipe/pose_output.gif" title="image" >}}
 
 

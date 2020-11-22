@@ -8,7 +8,7 @@ image: #"images/featured-post/post-1.jpg"
 
 # meta description
 description: "this is meta description"
-maht: true
+math: true
 
 # taxonomies
 categories:
@@ -46,9 +46,9 @@ GAN을 이용한 Image translation 의 시초에 가까운 Pix2Pix를 알아보�
 
 ## Objective
 
-$$\mathcal{L}\_{cGAN}(G, D) = \mathbb{E}\_{x, y}[\log D(x, y)] + \mathbb{E}_{x, z}[\log (1-D(x, G(x, z))]$$
+$$\mathcal{L}_{cGAN}(G, D) = \mathbb{E}_{x, y}[\log D(x, y)] + \mathbb{E}_{x, z}[\log (1-D(x, G(x, z))]$$
 
-$$\mathcal{L}\_{L1}(G) = \mathbb{E}_{x, y, z}[||y-G(x,z)||_1]$$
+$$\mathcal{L}_{L1}(G) = \mathbb{E}_{x, y, z}[||y-G(x,z)||_1]$$
 
 $$G^* = argmin_Gmax_D\mathcal{L}_{cGAN}(G, D) + \lambda\mathcal{L}_{L1}(G)$$
 
