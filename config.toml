@@ -1,4 +1,4 @@
-baseURL = "jjerry-test.github.io"
+baseURL = "https://jjerry-test.github.io"
 languageCode = "en-us"
 title = "Jerry"
 theme = "liva-hugo"
@@ -79,11 +79,14 @@ disqusShortname = "jjerry_k"
 [params]
 logo = "images/logo.png"
 home = "Home"
+
 # Meta data
 description = "Private Blog"
 author = "Jerry Kim"
+
 # Google Analitycs
 googleAnalitycsID = "UA-126636477-1"
+
 # Contact Information
 mobile = "Top Secret"
 email = "jaeyeol2931@gmail.com"
