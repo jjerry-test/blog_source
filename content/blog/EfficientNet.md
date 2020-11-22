@@ -45,9 +45,18 @@ URL: https://arxiv.org/abs/1905.11946
 - Design space를 줄이기 위해 모든 레이어는 상수 값을 이용하여 규칙적으로 변화하도록 함.
 - 최종 목적은 제한된 리소스에서 성능을 최대화하는 것.
 
-$$\mathcal{N}: \text{ConvNet} \\ \mathcal{F}_i: \text{Layer architecture} \\ L_i: \text{Network length} \\ C_i: \text{Width} \\ H_i, W_i: \text{Input resolution}$$
+$$\mathcal{N}: \text{ConvNet}$$
+$$ \mathcal{F}_i: \text{Layer architecture}$$
+$$L_i: \text{Network length}$$
+$$C_i: \text{Width}$$
+$$H_i, W_i: \text{Input resolution}$$
 
-$${max}_{d, w, r} Accuracy(\mathcal{N}(d, w, r)) \\ s.t. \mathcal{N}(d, w, r) = \bigodot_{i=1...s}\hat{\mathcal{F}}_i^{d \cdot \hat{L}_i}(X_{\langle r\cdot \hat{H}_i, r \cdot \hat{W}_i, w\cdot \hat{C}_i \rangle} ) \\ Memory(\mathcal{N}) \leq \text{target memory} \\FLOPS(\mathcal{N}) \leq \text{target flops}$$
+$$
+{max}\_{d, w, r} \space\space\space\space Accuracy(\mathcal{N}(d, w, r))
+$$
+$$s.t. \space\space\space\space \mathcal{N}(d, w, r) = \bigodot_{i=1...s}\hat{\mathcal{F}}_i^{d \cdot \hat{L}_i}(X_{\langle r\cdot \hat{H}_i, r \cdot \hat{W}_i, w\cdot \hat{C}_i \rangle} )$$
+$$Memory(\mathcal{N}) \leq \text{target memory}$$
+$$FLOPS(\mathcal{N}) \leq \text{target flops}$$
 
 ## Scaling Dimensions
 
@@ -81,7 +90,7 @@ $${max}_{d, w, r} Accuracy(\mathcal{N}(d, w, r)) \\ s.t. \mathcal{N}(d, w, r) = 
 - Observation 2: 세 요소의 balance가 매우 중요..
 - 다음과 같은 compound scaling method 제안.
 
-$$\phi: \text{Compound Coefficient} \\ depth: d = \alpha^\phi \\ width: w = \beta^\phi \\ resolution: r = \gamma^\phi \\ \text{s.t. }\alpha \cdot \beta^2 \cdot \gamma^2 \approx 2 \\ \alpha \ge 1, \beta \ge 1, \gamma \ge 1$$
+$$\phi: \text{Compound Coefficient} \\\ depth: d = \alpha^\phi \\\ width: w = \beta^\phi \\\ resolution: r = \gamma^\phi \\\ \text{s.t. }\alpha \cdot \beta^2 \cdot \gamma^2 \approx 2 \\\ \alpha \ge 1, \beta \ge 1, \gamma \ge 1$$
 
 - 각 값은 small grid search로 결정된 상수 값.
 
@@ -91,11 +100,11 @@ $$\phi: \text{Compound Coefficient} \\ depth: d = \alpha^\phi \\ width: w = \bet
 
 - EfficientNet-B0 를 baseline network로 하여  Accuracy, FLOPS 둘 다 최적화하도록 multi-objective neural architecture search 적용.
     - Step 1
-        - $\phi$ =1 로 고정
+        - \\(\phi\\) =1 로 고정
         - 식 2, 3을 기반으로 하여 small grid search
-        - EfficientNet-B0에 가장 적합한 값을 $\alpha$=1.2, $\beta$=1.1, $\gamma$=1.15
+        - EfficientNet-B0에 가장 적합한 값을 \\(\alpha=1.2, \beta=1.1, \gamma=1.15\\)
     - Step 2
-        - $\alpha$, $\beta$, $\gamma$를 고정하고 $\phi$를 변경하여 실험.
+        - \\(\alpha, \beta, \gamma\\)를 고정하고 \\(\phi\\)를 변경하여 실험.
         - Result (ImageNet Result for EfficientNet) 참고
 
 # Result

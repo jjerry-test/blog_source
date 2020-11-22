@@ -41,7 +41,7 @@ URL: https://arxiv.org/abs/1905.02244
 
 - MobileNetV2의 Inverted residual structure에 [squeeze and excitation](https://arxiv.org/abs/1709.01507) 을 추가.
 
-{{< figure src="/images/post/mobilev3/Untitled.png" title="image" >}}
+{{< figure src="/images/post/mobilev3/Untitled.png" >}}
 
 # **Network Search**
 
@@ -52,10 +52,10 @@ URL: https://arxiv.org/abs/1905.02244
 ## **NetAdapt for Layer-wise Search**
 
 1. platform-aware NAS로 찾은 Seed network architecture 로 시작. 
-2. 매 스텝마다:
-(a) 이전의 proposal 에 비해 latency가 최소 a만큼 감소된 새로운 proposal 생성. 
-(b) 각 proposal은 이전 스텝의 pre-trained model을 사용하여 새로 제안된 architecture를 채우고 누락된 weight에 대해선 적절한 값으로 채움. 각 proposal 은 T step 동안 finetuning하고 대략적인 accuracy 추출.
-(c) 몇몇 metric을 이용하여 최적의 proposal 을 선택.
+2. 매 스텝마다:  
+(a) 이전의 proposal 에 비해 latency가 최소 a만큼 감소된 새로운 proposal 생성.  
+(b) 각 proposal은 이전 스텝의 pre-trained model을 사용하여 새로 제안된 architecture를 채우고 누락된 weight에 대해선 적절한 값으로 채움. 각 proposal 은 T step 동안 finetuning하고 대략적인 accuracy 추출.  
+(c) 몇몇 metric을 이용하여 최적의 proposal 을 선택.  
 3. 목표로하는 latency에 도달할 때까지 반복.
 
 # **Network Improvements**
@@ -66,7 +66,7 @@ URL: https://arxiv.org/abs/1905.02244
 
 ## **Redesigning Expensive Layers**
 
-{{< figure src="/images/post/mobilev3/Untitled_1.png" title="image" >}}
+{{< figure src="/images/post/mobilev3/Untitled_1.png" >}}
 
 ## **Nonlinearities**
 
@@ -78,9 +78,9 @@ URL: https://arxiv.org/abs/1905.02244
 
 2. h-swish 를 deeper layer에서만 사용.
 
-{{< figure src="/images/post/mobilev3/Untitled_3.png" title="image" >}}
+{{< figure src="/images/post/mobilev3/Untitled_3.png" >}}
 
-{{< figure src="/images/post/mobilev3/Untitled_4.png" title="image" >}}
+{{< figure src="/images/post/mobilev3/Untitled_4.png" >}}
 
 ## **Large squeeze-and-excite**
 
@@ -90,9 +90,10 @@ URL: https://arxiv.org/abs/1905.02244
 
 # Result
 
-{{< figure src="/images/post/mobilev3/Untitled_5.png" title="image" >}}
+{{< figure src="/images/post/mobilev3/Untitled_5.png" >}}
 
-{{< figure src="/images/post/mobilev3/Untitled_6.png" title="image" >}}
+{{< figure src="/images/post/mobilev3/Untitled_6.png" >}}
+
 
 ### P.S
 

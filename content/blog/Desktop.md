@@ -46,11 +46,11 @@ HDD : Toshiba 1TB MQ01ABD100
 
 오자마자 포스팅 생각없이 조립을 해버림...
 
-{{< figure src="![image](/images/post/desktop/01.jpg)" title="image" >}}
+{{< figure src="/images/post/desktop/01.jpg" >}}
 
 커세어의 위엄.....번쩍번쩍 램....이쁘다...
 
-{{< figure src="![image](/images/post/desktop/02.jpg)" title="image" >}}
+{{< figure src="/images/post/desktop/02.jpg" >}}
 
 사이트에는 Fractal 로고가 위로 올라오게 해놨지만...
 

@@ -73,6 +73,6 @@ cap.release()
 
 음....살짝살짝 끊기긴 하네요.
 
-{{< figure src="/images/post/mediapipe/hands.gif" title="image" >}}
+{{< figure src="/images/post/mediapipe/hands.gif" >}}
 
 다음엔 파이썬으로 할 수 있는 마지막인 Pose 예제를 해보겠습니다.

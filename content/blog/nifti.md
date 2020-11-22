@@ -50,7 +50,7 @@ plt.show()
 
  예시를 보여드리면
 
- <img src='https://jjerry-k.github.io/public/img/nifti/01.png'>
+{{< figure src="/images/post/nifti/01.png" >}}
 
 이렇습니다!
 

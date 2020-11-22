@@ -25,10 +25,10 @@ type: "post"
 
 넘나 영롱하다...
 
-{{< figure src="![image](/images/post/keyboard/vamilo.png)" title="image" >}}
+{{< figure src="/images/post/keyboard/vamilo.png" >}}
 
-
+<!-- 
 이건 타건 영상입니다.  
 
 <iframe class="youtube" src='https://jjerry-k.github.io/public/img/keyboard/vamilo.mp4'  
- frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>  
+ frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>   -->

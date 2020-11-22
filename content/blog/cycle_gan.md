@@ -38,27 +38,27 @@ URL: https://arxiv.org/abs/1703.10593
 
 # Formulation
 
-- $X, Y$: X, Y 도메인의 데이터
-- $G, F$: X to Y generator, Y to X generator
-- $D_X, D_Y$: X, Y 도메인에 대한 Discriminator
+- \\(X, Y\\): X, Y 도메인의 데이터
+- \\(G, F\\): X to Y generator, Y to X generator
+- \\(D\_X, D\_Y\\): X, Y 도메인에 대한 Discriminator
 
 ## Adversarial Loss
 
-$$\mathcal{L}_{GAN}(G, D_Y, X, Y) = \mathbb{E}_{y\sim p_{data}(y)}[\log D_Y(y)] + \mathbb{E}_{x\sim p_{data}(x)}[\log (1 - D_Y(G(x)))]$$
+$$\mathcal{L}_{GAN}(G, D\_Y, X, Y) = \mathbb{E}\_{y\sim p\_{data}(y)}[\log D\_Y(y)] + \mathbb{E}\_{x\sim p\_{data}(x)}[\log (1 - D\_Y(G(x)))]$$
 
-$$\mathcal{L}_{GAN}(F, D_X, Y, X) = \mathbb{E}_{x\sim p_{data}(x)}[\log D_X(x)] + \mathbb{E}_{y\sim p_{data}(y)}[\log (1 - D_x(F(y)))]$$
+$$\mathcal{L}_{GAN}(F, D\_X, Y, X) = \mathbb{E}\_{x\sim p\_{data}(x)}[\log D\_X(x)] + \mathbb{E}\_{y\sim p\_{data}(y)}[\log (1 - D\_x(F(y)))]$$
 
 ## Cycle Consistency Loss
 
 - 각각의 X, Y 데이터를 Y, X 데이터로 변환 후 다시  X, Y 데이터 복원.
 
-$$\mathcal{L}_{cyc}(G, F) = \mathbb{E}_{x\sim p_{data}(x)}[||F(G(x)) - x||_1 + \mathbb{E}_{y\sim p_{data}(y)}[||G(F(y)) - y||_1$$
+$$\mathcal{L}\_{cyc}(G, F) = \mathbb{E}\_{x\sim p\_{data}(x)}[||F(G(x)) - x||\_1 + \mathbb{E}\_{y\sim p\_{data}(y)}[||G(F(y)) - y||\_1$$
 
 ## Full Objective
 
-$$\mathcal{L}(G, F, D_X, D_Y) = \mathcal{L}_{GAN}(G, D_Y, X, Y) + \mathcal{L}_{GAN}(F, D_X, Y, X) + \lambda\mathcal{L}_{cyc}(G, F)$$
+$$\mathcal{L}(G, F, D\_X, D_Y) = \mathcal{L}\_{GAN}(G, D\_Y, X, Y) + \mathcal{L}\_{GAN}(F, D\_X, Y, X) + \lambda\mathcal{L}\_{cyc}(G, F)$$
 
-$$G^*, F^* = argmin_{G, F}argmax_{D_X, D_Y}\mathcal{L}(G, F, D_X, D_Y)$$
+$$G^\*,F^\* = argmin_{G, F}argmax_{D_X, D_Y}\mathcal{L}(G, F, D_X, D_Y)$$
 
 {{< figure src="/images/post/cyclegan/Untitled_2.png" title="image" >}}
 
@@ -71,7 +71,7 @@ $$G^*, F^* = argmin_{G, F}argmax_{D_X, D_Y}\mathcal{L}(G, F, D_X, D_Y)$$
 
 ## Training detail
 
-- Loss 에서 $\lambda$ 는 10.
+- Loss 에서 \\(\lambda\\) 는 10.
 - Optimizer: Adam
 - Learning rate: 0.002
 

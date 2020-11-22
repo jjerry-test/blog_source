@@ -46,23 +46,23 @@ seed는 [위키피디아](https://en.wikipedia.org/wiki/Random_seed), 혹은 다
 
 ### Seed 고정 없음
 
-{{< figure src="/images/post/seed/Untitled.png" title="image" >}}
+{{< figure src="/images/post/seed/Untitled.png" >}}
 
 ### PYTHONHASHSEED
 
-{{< figure src="/images/post/seed/Untitled_1.png" title="image" >}}
+{{< figure src="/images/post/seed/Untitled_1.png" >}}
 
 ### Random
 
-{{< figure src="/images/post/seed/Untitled_2.png" title="image" >}}
+{{< figure src="/images/post/seed/Untitled_2.png" >}}
 
 ### Numpy
 
-{{< figure src="/images/post/seed/Untitled_3.png" title="image" >}}
+{{< figure src="/images/post/seed/Untitled_3.png" >}}
 
 ### TensorFlow
 
-{{< figure src="/images/post/seed/Untitled_4.png" title="image" >}}
+{{< figure src="/images/post/seed/Untitled_4.png" >}}
 
 원래 마지막으로 4개의 seed 를 모두 고정하고 실험도 해보려고 했는데 TensorFlow 만 고정해도 거의 동일한 결과가...나오더군요. (예전엔 아니었는데...)
 

@@ -55,13 +55,13 @@ URL: https://arxiv.org/abs/1801.04381
 - 기존의 Residual Block 과 비슷한 구조 (Bottleneck → Expansion & Skip connection).
 - 본 논문에선 Expansion → Bottleneck & Skip connection 구조의 Inverted Residual Block 사용.
 
-{{< figure src="/images/post/mobilev2/Untitled.png" title="image" >}}
+{{< figure src="/images/post/mobilev2/Untitled.png" >}}
 
-{{< figure src="/images/post/mobilev2/Untitled_1.png" title="image" >}}
+{{< figure src="/images/post/mobilev2/Untitled_1.png" >}}
 
 # **Model Architecture**
 
-{{< figure src="/images/post/mobilev2/Untitled_2.png" title="image" >}}
+{{< figure src="/images/post/mobilev2/Untitled_2.png" >}}
 
 # **Ablation study**
 
@@ -75,4 +75,4 @@ URL: https://arxiv.org/abs/1801.04381
 - Bottleneck 에서는 activation 을 사용하지 않는 것이 더 좋음.
 - Figure 6 (a) 참고
 
-{{< figure src="/images/post/mobilev2/Untitled_3.png" title="image" >}}
+{{< figure src="/images/post/mobilev2/Untitled_3.png" >}}

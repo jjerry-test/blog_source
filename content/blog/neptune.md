@@ -64,11 +64,11 @@ Neptune을 설치합니다.
 
 conda를 쓰시는 분들께 보통 conda install 로 설치하라고 말씀을 드리지만.. 이번엔 특별히 pip install로 설치를 추천드립니다. 
 
-{{< figure src="https://github.com/jjerry-k/jjerry-k.github.io/blob/master/public/img/neptune/Untitled.png?raw=true" title="image" >}}
+{{< figure src="https://github.com/jjerry-k/jjerry-k.github.io/blob/master/public/img/neptune/Untitled.png?raw=true" >}}
 
 설치 후 자신이 사용하는 OS에 맞춰서 API token을 PC에 기입(?) 해주세요.
 
-{{< figure src="https://github.com/jjerry-k/jjerry-k.github.io/blob/master/public/img/neptune/Untitled_1.png?raw=true" title="image" >}}
+{{< figure src="https://github.com/jjerry-k/jjerry-k.github.io/blob/master/public/img/neptune/Untitled_1.png?raw=true" >}}
 
 여기까지 하면 세팅은 끝납니다. 그 이후에 `Run script`, `Result in UI` 부분은 하고 싶으신 분만 해보세요!
 
@@ -219,43 +219,43 @@ neptune에는 총 7개의 탭이 있습니다.
 
 여기에는 `neptune.log_metric()`을 사용한 변수들이 **그래프**로 기록됩니다. 
 
-{{< figure src="https://github.com/jjerry-k/jjerry-k.github.io/blob/master/public/img/neptune/Untitled_2.png?raw=true" title="image" >}}
+{{< figure src="https://github.com/jjerry-k/jjerry-k.github.io/blob/master/public/img/neptune/Untitled_2.png?raw=true" >}}
 
 ### Log
 
 Charts에 기록된 변수의 값이 기록되고 추가적으로 `neptune.log_image()`, `neptune.log_text()` 를 사용한 변수 또한 기록됩니다.
 
-{{< figure src="https://github.com/jjerry-k/jjerry-k.github.io/blob/master/public/img/neptune/Untitled_3.png?raw=true" title="image" >}}
+{{< figure src="https://github.com/jjerry-k/jjerry-k.github.io/blob/master/public/img/neptune/Untitled_3.png?raw=true" >}}
 
 ### Monitoring
 
 리소스 모니터링과 standard error, standard output을 볼 수 있어요.
 
-{{< figure src="https://github.com/jjerry-k/jjerry-k.github.io/blob/master/public/img/neptune/Untitled_4.png?raw=true" title="image" >}}
+{{< figure src="https://github.com/jjerry-k/jjerry-k.github.io/blob/master/public/img/neptune/Untitled_4.png?raw=true" >}}
 
 ### Artifacts
 
 neptune에 원하는 파일을 전송하여 저장할 수 있습니다. 
 
-{{< figure src="https://github.com/jjerry-k/jjerry-k.github.io/blob/master/public/img/neptune/Untitled_5.png?raw=true" title="image" >}}
+{{< figure src="https://github.com/jjerry-k/jjerry-k.github.io/blob/master/public/img/neptune/Untitled_5.png?raw=true" >}}
 
 ### Source code
 
 생략
 
-{{< figure src="https://github.com/jjerry-k/jjerry-k.github.io/blob/master/public/img/neptune/Untitled_6.png?raw=true" title="image" >}}
+{{< figure src="https://github.com/jjerry-k/jjerry-k.github.io/blob/master/public/img/neptune/Untitled_6.png?raw=true" >}}
 
 ### Parameters
 
 코드 상단에 적은 PARAMS 가 기록이 됩니다. 
 
-{{< figure src="https://github.com/jjerry-k/jjerry-k.github.io/blob/master/public/img/neptune/Untitled_7.png?raw=true" title="image" >}}
+{{< figure src="https://github.com/jjerry-k/jjerry-k.github.io/blob/master/public/img/neptune/Untitled_7.png?raw=true" >}}
 
 ### Detail
 
 뭐...실험의 정보, 시간 등 기록이 되고 추가적으로 `neptune.set_property`를 이용하여 Properties 에 변수를 추가할 수 있어요!
 
-{{< figure src="https://github.com/jjerry-k/jjerry-k.github.io/blob/master/public/img/neptune/Untitled_8.png?raw=true" title="image" >}}
+{{< figure src="https://github.com/jjerry-k/jjerry-k.github.io/blob/master/public/img/neptune/Untitled_8.png?raw=true" >}}
 
 wandb와 비슷한 역할을 하는 neptune.ai라는 tool에 대해 다루었습니다.
 

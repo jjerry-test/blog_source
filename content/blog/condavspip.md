@@ -27,7 +27,7 @@ type: "post"
 내용을 보니 pip 로 설치하는것 보다 conda를 이용하면 좋은 점이 두 가지가 있다고 합니다.
 
 1. CPU 성능이 더 빨라졌다.
-{{< figure src="![image](https://www.anaconda.com/wp-content/uploads/TensorFlowTraining.png)" title="image" >}}
+{{< figure src="https://www.anaconda.com/wp-content/uploads/2019/12/TensorFlowTraining.png" >}}
 
 
 2. GPU 버전 설치가 쉽다.  
@@ -38,7 +38,7 @@ type: "post"
 
 그리고 CPU 성능 증가는 **Intel CPU에 한해서** 빨라지는 것 같습니다.
 
-{{< figure src="![image](/images/post/nopip/02.png)" title="image" >}}
+{{< figure src="/images/post/nopip/02.png" >}}
 
 사진을 보시면 **the Intel® Math Kernel Library for Deep Neural Networks (Intel® MKL-DNN)** 을 사용해서 올렸다는거죠. (AMD 사용자 쥬륵..)
 

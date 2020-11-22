@@ -73,9 +73,9 @@ and Molecular Medical Imaging, Fudan University, Shanghai 200433, China
 - 하지만 최근까지 제안된 Network는 대부분 2D image에 대한 upscaling.
 - 몇몇 Network는 3D image로 확장했지만 그렇게 효과를 보지 못했음.
 - 이 논문의 Flow
-{{< figure src="![image](/images/post/thin/fig01.PNG)" title="image" >}}
+{{< figure src="/images/post/thin/fig01.PNG" >}}
 
-{{< figure src="![image](/images/post/thin/fig02.PNG)" title="image" >}}
+{{< figure src="/images/post/thin/fig02.PNG" >}}
 
 ### B. Network Architecture
 - First stage는 3D-Y-Net-GAN 으로 Thick MRI를 Thin MRI로 생성 후 3D-DenseU-Net으로 recalibration.
@@ -85,7 +85,7 @@ and Molecular Medical Imaging, Fudan University, Shanghai 200433, China
 - Output : Thin MRI
 - r : Upscaling Factor ( r = 8 일 경우의 예시 )
 
-{{< figure src="![image](/images/post/thin/fig03.PNG)" title="image" >}}
+{{< figure src="/images/post/thin/fig03.PNG" >}}
 
 - Feature Extraction Branches
   - 각 input에 대한 feature 추출.
@@ -108,31 +108,31 @@ and Molecular Medical Imaging, Fudan University, Shanghai 200433, China
   - Upsampling layer 3개를 연속으로 붙여서 8배 확장하는 구조 대신에 Multipath upscaling strategy 적용. **-> Artifact 완화 효과...?**
 
 - Discriminator
-{{< figure src="![image](/images/post/thin/fig04.PNG)" title="image" >}}
+{{< figure src="/images/post/thin/fig04.PNG" >}}
 
   - Axial Image, Saggital Image, Combination Image 가 Real Pair인지 Fake Pair인지 감별.
-  - Input : ($I^A$, $I^Y$, $I^S$), ($I^A$, $I^{GT}$, $I^S$)
+  - Input : \\((I^A, I^Y, I^S), (I^A, I^{GT}, I^S)\\)
   - Output : Real, Fake
 
 #### 3D-DenseU-Net
-{{< figure src="![image](/images/post/thin/fig05.PNG)" title="image" >}}
+{{< figure src="/images/post/thin/fig05.PNG" >}}
 
 - 전체적인 구조는 U-Net이지만 2개의 Enhanced residual block 을 적용하여 detail recalibration.
-- Input :  $I^Y$, $I^S$, $I^{YA}$ **-> 어떻게 3개가 input으로...?**
+- Input :  \\(I^Y, I^S, I^{YA}\\) **-> 어떻게 3개가 input으로...?**
 - Output : Thin MR Image
-- $I^A$ 를 $I^Y$ 의 해당 위치에 insertion 하여 $I^{YA}$ 생성. -> 아직 이해 X..
+- \\(I^A\\) 를 \\(I^Y\\) 의 해당 위치에 insertion 하여 \\(I^{YA}\\) 생성. -> 아직 이해 X..
   - Axial Information 을 이용하여 정확한 axial 을 만들기 위해...
-  - $I^S$ 를 $I^Y$ 에 insertion하게 되면 Sagittal 에 대한 information 이 과해지기 때문에 Reconstrtion Axial Image의 Quality 가 안좋아 질 것!
+  - \\(I^S\\) 를 \\(I^Y\\) 에 insertion하게 되면 Sagittal 에 대한 information 이 과해지기 때문에 Reconstrtion Axial Image의 Quality 가 안좋아 질 것!
 - End-to-End 가 아니라 각각 따로따로 학습. **-> Faster RCNN 과 같은 방식으로 할런지....?**
   
 #### Loss Function
-- $G$ 는 generator 라는 의미.
+- \\(G\\) 는 generator 라는 의미.
 - Self-Adaptive Charbonnier Loss
-  - 일반적으로 많이 사용되는 $\ell2$ 전반적으로 Smoothing 하게 만들어지고 $\ell1$ 은 GT와 Prediction 의 차이로 indiscriminate 하게 학습.
-  - [Deep Laplacian Pyramid Networks for Fast and Accurate Super-Resolution](https://arxiv.org/pdf/1704.03915.pdf)에 따르면 **Charbonnier loss**(미분가능한 $\ell1$의 분산)가 $\ell1$, $\ell2$ 보다 성능이 뛰어남. 
+  - 일반적으로 많이 사용되는 \\(\ell2\\) 전반적으로 Smoothing 하게 만들어지고 \\(\ell1\\) 은 GT와 Prediction 의 차이로 indiscriminate 하게 학습.
+  - [Deep Laplacian Pyramid Networks for Fast and Accurate Super-Resolution](https://arxiv.org/pdf/1704.03915.pdf)에 따르면 **Charbonnier loss**(미분가능한 $\ell1$의 분산)가 \\(\ell1, \ell2\\) 보다 성능이 뛰어남. 
   - [Deep Learning for Isotropic Super-Resolution from Non-Isotropic 3D Electron Microscopy](https://arxiv.org/pdf/1706.03142.pdf) 에 따르면 **Cubic-weighted mean square error** 가 Generated 영상과 Ground truth 간의 차이가 큰 "어려운" 부분의 성능을 강조.
   - 다음과 같은 Loss 제안.
-  - $\epsilon$ 은 default로 $10^{-6}$
+  - \\(\epsilon\\) 은 default로 \\(10^{-6}\\)
 
 $$L^G_{SC} = \frac{1}{rLWH}\sum_{x,y,z=1,1,1}^{L,W,rH}\sqrt{(I^{GT}_{x,y,z}-I^Y_{z,y,z})^2+\epsilon}\cdot\bigg(\frac{1}{2}+\frac{(I^{GT}_{x,y,z}-I^Y_{z,y,z})^2}{2max((I^{GT}-I^Y)^2)}\bigg)$$
 
@@ -140,7 +140,7 @@ $$L^G_{SC} = \frac{1}{rLWH}\sum_{x,y,z=1,1,1}^{L,W,rH}\sqrt{(I^{GT}_{x,y,z}-I^Y_
   - Charbonnier Loss는 Pixelwise difference에 대한 Loss, Gradient에 대한 손실을 줄 수 있음.
   - 다음과 같이 각 axis에 대한 Gradient 를 이용하여 Loss 제안.
 
-$$L^G_{GC} = \mathbb{E}[(\nabla_{x}I^{GT}_{x,y,z} - \nabla_{x}I^Y_{x,y,z})^2] \\  + \mathbb{E}[(\nabla_{y}I^{GT}_{x,y,z} - \nabla_{y}I^Y_{x,y,z})]^2\\ + \mathbb{E}[(\nabla_{z}I^{GT}_{x,y,z} - \nabla_{z}I^Y_{x,y,z})^2]$$
+$$L^G_{GC} = \mathbb{E}[(\nabla_{x}I^{GT}_{x,y,z} - \nabla_{x}I^Y_{x,y,z})^2] \\\  + \mathbb{E}[(\nabla_{y}I^{GT}_{x,y,z} - \nabla_{y}I^Y_{x,y,z})]^2 \\\ + \mathbb{E}[(\nabla_{z}I^{GT}_{x,y,z} - \nabla_{z}I^Y_{x,y,z})^2]$$
 
 - Adversarial Loss
   - LSGAN Loss 사용. 
@@ -149,7 +149,7 @@ $$L^D=\frac{1}{2}\mathbb{E}[(D(I^{GT}, I^A, I^S)-1)^2+D(I^Y, I^A, I^S)^2]$$
 
 $$L^G_{AD}=\mathbb{E}[(D(I^Y, I^A, I^S)-1)^2]$$
 
-- $\ell_2$ Weight Regularization Loss
+- \\(\ell_2\\) Weight Regularization Loss
   - (Loss는 아니지만...)
   - Overfitting을 방지하기 위해 사용.
 
@@ -157,63 +157,55 @@ $$L^G_{WR} = \sum\Vert W_G\Vert^2_2$$
 
 
 - 3D-Y-Net-GAN Loss 
-  - $L_G = L^G_{SC} + \lambda_1L^G_{GC} + \lambda_2L^G_{AD} + \lambda_3L^G_{WR}$
+  - \\(L_G = L^G_{SC} + \lambda_1L^G_{GC} + \lambda_2L^G_{AD} + \lambda_3L^G_{WR}\\)
   
 - 3D-DenseU-Net Loss 
-  - $L = L_{SC} + \lambda_1L_{GC} + \lambda_3L_{WR}$ 
+  - \\(L = L_{SC} + \lambda_1L_{GC} + \lambda_3L_{WR}\\)
 
 
 ## Experimental Result
 - Multiplanar 의 효율성을 검증하기 위해 다음과 같이 세 가지 경우로 나눔.
-  - 1) Axial, Sagittal 둘 다 이용.
-  - 2) Axial 만 이용.
-  - 3) Saigittal 만 이용.
+  - Axial, Sagittal 둘 다 이용.
+  - Axial 만 이용.
+  - Saigittal 만 이용.
 
 - Loss function을 검증하기 위해 네 가지 경우로 나눔.
-  - 1) $\ell1norm + L_{GC} + L_{AD} + L_{WR}$ (pixelwise loss를 $\ell1norm$으로 대체.)
-  - 2) $L_{SC} + L_{GC} + L_{WR}$
-  - 3) $L_{SC} + L_{AD} + L_{WR}$
-  - 4) $L_{SC} + L_{GC} + L_{AD} + L_{WR}$
+  - \\(\ell1norm + L_{GC} + L_{AD} + L_{WR}\\) (pixelwise loss를 \\(\ell1norm\\)으로 대체.)
+  - \\(L_{SC} + L_{GC} + L_{WR}\\)
+  - \\(L_{SC} + L_{AD} + L_{WR}\\)
+  - \\(L_{SC} + L_{GC} + L_{AD} + L_{WR}\\)
 
 - Evalutaion Method 로는 아래와 같이 네 가지 기법과 자신들의 Network
-  - 1) [Bicubic interpolation](https://ieeexplore.ieee.org/document/1163711)
-  - 2) [Sparse representation](https://ieeexplore.ieee.org/document/5466111)
-  - 3) [3D-SRU-Net](https://arxiv.org/abs/1706.03142)
-  - 4) 3D-Y-Net-GAN
-  - 5) 3D-Y-Net-GAN + 3D-DenseU-Net
+  - [Bicubic interpolation](https://ieeexplore.ieee.org/document/1163711)
+  - [Sparse representation](https://ieeexplore.ieee.org/document/5466111)
+  - [3D-SRU-Net](https://arxiv.org/abs/1706.03142)
+  - 3D-Y-Net-GAN
+  - 3D-Y-Net-GAN + 3D-DenseU-Net
 
 - Metrics으로는 다음 세 가지 사용.
   - PSNR(Peak Signal-to-Noise Ratio)
 
 $$
 \begin{alignedat}{2}
-MAX_I = 255\\
+MAX_I = 255 \\\ 
 PSNR = 20\cdot\log_{10}\Bigg(\frac{MAX_I}{\sqrt{\frac{1}{rLWH}\sum_{x, y, z}(I^R_{x,y,z}-I^{GT}_{x,y,z})^2}}\Bigg)
 \end{alignedat}
 $$
 
   - SSIM(Structural SIMilarity)
 
-$$
-\begin{alignedat}{2}
-L : 255(\text{dynamic range})\\
-\mu : \text{Variance}\\
-\mu_{ab} : \text{Covariance}\\
-c_1 = (k_1L)^2\\
-c_2 = (k_2L)^2\\
-SSIM=\frac{(2\mu_a\mu_b+c_1)(2\sigma_{ab}+c_2)}{(\mu_a^2+\mu_b^2+c_1)(\sigma_a^2+\sigma_b^2+c_2)}
-\end{alignedat}
-$$
+$$L=255(\text{dynamic\ range})$$
+$$\mu:\text{Variance} $$
+$$\mu\_{ab}:\text{Covariance} $$
+$$c\_1=(k\_1L)^2 $$
+$$c\_2=(k\_2L)^2 $$
+$$SSIM=\frac{(2\mu\_a\mu\_b+c_1)(2\sigma\_{ab}+c_2)}{(\mu\_a^2+\mu\_b^2+c\_1)(\sigma\_a^2+\sigma_b^2+c_2)}$$
 
   - NMI(Normalized Mutual Information)
 
-$$
-\begin{alignedat}{2}
-H(X) = -\sum_{x_i}\in{X}p(x_i)\log{p(x_i)} \\
-H(X, Y) = -\sum_{y_i\in{Y}} \sum_{x_i\in{X}}p(x_i, y_i)\log{p(x_i, y_i)}\\
-NMI(X, Y) = 2\frac{H(X) + H(Y) - H(X, Y)}{H(X)+H(Y)}
-\end{alignedat}
-$$
+$$H(X) = -\sum\_{x\_i}\in{X} p(x\_i)\log {p(x\_i)}$$
+$$H(X, Y) = -\sum_{y_i\in{Y}} \sum_{x_i\in{X}}p(x_i, y_i)\log{p(x_i, y_i)}$$
+$$NMI(X, Y) = 2\frac{H(X) + H(Y) - H(X, Y)}{H(X)+H(Y)}$$
 
 - pixel 값을 [-1, 1]로 clipping -> 다시 8-bit gray scale로 변환.
 - Generated MR images 와 Ground truth가 비슷할 수록 높은 값을 가짐.
@@ -223,7 +215,7 @@ $$
 
 -  총 154 samples의 2~5세 유아 Axial, Sagittal Thick MRI, Axial Thin MRI
 
-{{< figure src="![image](/images/post/thin/tab01.PNG)" title="image" >}}
+{{< figure src="/images/post/thin/tab01.PNG" >}}
 
 - Table 1. 과 같은 parameter 사용.
 - Dataset 분할
@@ -233,10 +225,10 @@ $$
 - Preprocessing
   - 각 영상별로 다른 parameter를 가지고 있고 intensities 도 다양하기 때문에 spatial misalignment, intensity imblance를 발견.
   - Registration을 위해 SPM12 를 이용하여 unified spatial normalization 수행.
-    - 1. DICOM to NIfTI
-    - 2. Segment gray matter, white matter, cerebrospinal fluid, skull, scalp, and air mask.
-    - 3. Nonlinear deformation field
-    - 4. ICBM Asian brain template in affine regularization
+    - DICOM to NIfTI
+    - Segment gray matter, white matter, cerebrospinal fluid, skull, scalp, and air mask.
+    - Nonlinear deformation field
+    - ICBM Asian brain template in affine regularization
   - Grayscale Normalization
     - MRI 는 16 bit..
     - 단순 linear transformation 으로 [-1, 1]로 mapping.
@@ -255,7 +247,7 @@ $$
   - Batch Size : 16
   - Epochs : 200
   - [Adam Optimizer Parameter](https://arxiv.org/pdf/1412.6980.pdf)
-    - $\beta_1$: 0.9
+    - \\(\beta_1\\): 0.9
     - Learning rate schedule
       - Initial value : 5*10<sup>-4</sup>
       - Decay Step : 252
@@ -267,12 +259,12 @@ $$
   - Batch Size : 12
   - Epochs : 300
   - Adam Optimizer Parameter
-    - $\beta_1$: 0.9
+    - \\(\beta_1\\): 0.9
     - Learning rate schedule
       - Initial value : 5*10<sup>-4</sup>
       - Decay Step : 373
       - Decay rate : 0.989
-  - $\lambda_1, \lambda_3$ : 1, 0.001
+  - \\(\lambda_1, \lambda_3\\) : 1, 0.001
   - He initializer
 
 - SR Parameter
@@ -286,23 +278,23 @@ $$
   - Batch Size : 32
   - Epochs : 300
   - Adam Optimizer Parameter
-    - $\beta_1$: 0.9
+    - \\(\beta_1\\): 0.9
     - Initial value : 5*10<sup>-4</sup>
 
 
 #### C. Ablation Experiment On Input Data
 - Input을 변경하면서 실험 진행. 
-{{< figure src="![image](/images/post/thin/fig06.PNG)" title="image" >}}
-{{< figure src="![image](/images/post/thin/tab02.PNG)" title="image" >}}
+{{< figure src="/images/post/thin/fig06.PNG" >}}
+{{< figure src="/images/post/thin/tab02.PNG" >}}
 - Axial 과 Sagittal 을 같이 사용했을 때가 좀 더 세부적인 구조, 적은 왜곡을 보임.
   - 두 축의 영상이 서로 조합하여 reconstruction task를 향상.
 - Quantitive evaluation 에서도 더 높은 지표를 산출.
 
 #### D. Ablation Experiment On Loss Function
 - Loss를 변경하면서 실험 진행.
-{{< figure src="![image](/images/post/thin/fig07.PNG)" title="image" >}}
-{{< figure src="![image](/images/post/thin/tab03.PNG)" title="image" >}}
-- Self-Adaptive Charbonnier Loss에 비해 $\ell1$ norm 이 흐린 영상을 생성.
+{{< figure src="/images/post/thin/fig07.PNG" >}}
+{{< figure src="/images/post/thin/tab03.PNG" >}}
+- Self-Adaptive Charbonnier Loss에 비해 \\(\ell1 norm\\) 이 흐린 영상을 생성.
 - Without Gradient Correction Loss
   - 덜 선명한 영상을 생성.
 - Without Adversarial Loss
@@ -311,8 +303,8 @@ $$
 
 #### E. Comparison With Other  Methods
 - 다른 Method들과 비교.
-{{< figure src="![image](/images/post/thin/fig08.PNG)" title="image" >}}
-{{< figure src="![image](/images/post/thin/tab04.PNG)" title="image" >}}
+{{< figure src="/images/post/thin/fig08.PNG" >}}
+{{< figure src="/images/post/thin/tab04.PNG" >}}
 - 제안한 method로 생성된 image가 가장 Realistic하고 Ground truth 와 가장 비슷하다고 함.
 - 대부분 Quantitative evaluation 에서 제안한 method가 다른 것들을 다 뛰어넘음.
 

@@ -203,7 +203,7 @@ cap.release()
 
 다음 애니메이션은 코드를 깨작 수정하여 GIF로 만든 것입니다. 
 
-{{< figure src="/images/post/mediapipe/face_mesh.gif" title="image" >}}
+{{< figure src="/images/post/mediapipe/face_mesh.gif" >}}
 
 별 기대 안하고 돌렸는데 제 맥미니 (Intel(R) Core(TM) i5-8500B CPU @ 3.00GHz) 으로 평균 30fps 이상 나오네요!
 

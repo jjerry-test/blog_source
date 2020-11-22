@@ -41,21 +41,21 @@ type: "post"
 
 ngrok은 대충 로컬 웹 서버를 SSH 접속이나 모바일 테스트 할 수 있도록 공공 URL로 접근 가능토록 해주는 것입니다.  가격은 걱정하지 마세요. 1개는 무료거든요. 
 
-{{< figure src="/images/post/colab_vscode/Untitled.png" title="image" >}}
+{{< figure src="/images/post/colab_vscode/Untitled.png" >}}
 
 
 어쨌든 가입을 하고 token을 생성 해줍니다. 
 
-{{< figure src="/images/post/colab_vscode/Untitled_1.png" title="image" >}}
+{{< figure src="/images/post/colab_vscode/Untitled_1.png" >}}
 
 
-{{< figure src="/images/post/colab_vscode/Untitled_2.png" title="image" >}}
+{{< figure src="/images/post/colab_vscode/Untitled_2.png" >}}
 
 ## 2. Colab에 ngrok 설치 및 실행
 
 노트북 설정을 먼저 해주세요. (ex) CPU, GPU, TPU
 
-{{< figure src="/images/post/colab_vscode/Untitled_3.png" title="image" >}}
+{{< figure src="/images/post/colab_vscode/Untitled_3.png" >}}
 
 그리고 셀에 다음과 같이 코드를 실행합니다. 
 
@@ -88,11 +88,11 @@ str_ssh = "ssh root@" + str_ssh
 print(str_ssh)
 ```
 
-{{< figure src="/images/post/colab_vscode/Untitled_4.png" title="image" >}}
+{{< figure src="/images/post/colab_vscode/Untitled_4.png" >}}
 
 출력으로 나온 커맨드를 이용하여 한번 터미널에서 테스트를 해봅니다. 비밀번호는 `carbonara` 입니다. 
 
-{{< figure src="/images/post/colab_vscode/Untitled_5.png" title="image" >}}
+{{< figure src="/images/post/colab_vscode/Untitled_5.png" >}}
 
 ## 3. VSCode에서 실행하기
 
@@ -108,15 +108,15 @@ drive.mount('/googledrive')
 ! ln -s /googledrive/My\ Drive/colabdrive/root/.local/share/code-server /root/.local/share/
 ```
 
-{{< figure src="/images/post/colab_vscode/Untitled_6.png" title="image" >}}
+{{< figure src="/images/post/colab_vscode/Untitled_6.png" >}}
 
 VSCode를 켜고 ssh로 접속을 해봅니다. 
 
-{{< figure src="/images/post/colab_vscode/Untitled_7.png" title="image" >}}
+{{< figure src="/images/post/colab_vscode/Untitled_7.png" >}}
 
 접속해서 Colab Notebooks 디렉토리에 접근한 화면입니다. Google Drive랑 동일한 것을 확인할 수 있죠!
 
-{{< figure src="/images/post/colab_vscode/Untitled_8.png" title="image" >}}
+{{< figure src="/images/post/colab_vscode/Untitled_8.png" >}}
 
 ## 4. 코드 작성 및 실행
 
@@ -126,11 +126,11 @@ VSCode를 켜고 ssh로 접속을 해봅니다.
 
 저는 테스트이니 아래 세 가지만 설치했습니다.
 
-{{< figure src="/images/post/colab_vscode/Untitled_9.png" title="image" >}}
+{{< figure src="/images/post/colab_vscode/Untitled_9.png" >}}
 
 그럼 한번 실행해보죠.
 
-{{< figure src="/images/post/colab_vscode/Untitled_10.png" title="image" >}}
+{{< figure src="/images/post/colab_vscode/Untitled_10.png" >}}
 
 오.....신기...
 
@@ -138,7 +138,7 @@ VSCode를 켜고 ssh로 접속을 해봅니다.
 
 `htop`를 이용해서 리소스 모니터링도 가능하죠.
 
-{{< figure src="/images/post/colab_vscode/Untitled_11.png" title="image" >}}
+{{< figure src="/images/post/colab_vscode/Untitled_11.png" >}}
 
 여기까지 Colab x VSCode 포스팅입니다. 뭐....어떤 면에선 편할 것 같지만 막...편할 것 같진 않네요. 
 
@@ -146,7 +146,7 @@ VSCode를 켜고 ssh로 접속을 해봅니다.
 
 일정 시간동안 동작이 없으면 연결이 끊겨서 다시 실행을 시켜야하는....상황이 오죠.
 
-{{< figure src="/images/post/colab_vscode/Untitled_12.png" title="image" >}}
+{{< figure src="/images/post/colab_vscode/Untitled_12.png" >}}
 
 나한테 왜 그래...
 
@@ -158,12 +158,12 @@ VSCode를 켜고 ssh로 접속을 해봅니다.
 끊겼습니다. 
 
 
-{{< figure src="https://github.com/jjerry-k/jjerry-k.github.io/blob/master/public/img/colab_vscode/Untitled_13.png?raw=true" title="image" >}}
+{{< figure src="https://github.com/jjerry-k/jjerry-k.github.io/blob/master/public/img/colab_vscode/Untitled_13.png?raw=true" >}}
 
 
 VSCode 를 봐도..
 
-{{< figure src="https://github.com/jjerry-k/jjerry-k.github.io/blob/master/public/img/colab_vscode/Untitled_14.png?raw=true" title="image" >}}
+{{< figure src="https://github.com/jjerry-k/jjerry-k.github.io/blob/master/public/img/colab_vscode/Untitled_14.png?raw=true" >}}
 
 
 그렇습니다. 제 생각대로 Colab의 Session time이 끝나면...끊기네요..ㅎㅎ

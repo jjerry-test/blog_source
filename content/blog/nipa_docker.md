@@ -33,7 +33,7 @@ type: "post"
 
 NIPA GPU 서버에 접속을 하면 다음과 같은 화면이 출력됩니다.
 
-{{< figure src="/images/post/nipa_docker/Untitled.png" title="image" >}}
+{{< figure src="/images/post/nipa_docker/Untitled.png" >}}
 
 먼저 말씀드렸던 conda 환경으로 기본적으로 다양한 환경이 제공되네요. 
 
@@ -41,7 +41,7 @@ NIPA GPU 서버에 접속을 하면 다음과 같은 화면이 출력됩니다.
 
 그래서 TensorFlow2, python3.6 환경을 activate  한 후 설치를 시도했죠.
 
-{{< figure src="/images/post/nipa_docker/Untitled_1.png" title="image" >}}
+{{< figure src="/images/post/nipa_docker/Untitled_1.png" >}}
 
 |what...?|
 |:--:|
@@ -49,7 +49,7 @@ NIPA GPU 서버에 접속을 하면 다음과 같은 화면이 출력됩니다.
 
 음....conda 버전의 문제인가 싶어서 base conda를 update  하려 했습니다.
 
-{{< figure src="/images/post/nipa_docker/Untitled_3.png" title="image" >}}
+{{< figure src="/images/post/nipa_docker/Untitled_3.png" >}}
 
 |what...?|
 |:--:|
@@ -104,7 +104,7 @@ sudo docker run hello-world
 
 만약에 제대로 설치 되었다면 마지막에 다음과 같은 출력이 남습니다
 
-{{< figure src="/images/post/nipa_docker/Untitled_4.png" title="image" >}}
+{{< figure src="/images/post/nipa_docker/Untitled_4.png" >}}
 
 여기까지 하시면 기본 Docker 설치는 끝났습니다. 
 
@@ -132,7 +132,7 @@ sudo docker run --gpus all nvidia/cuda:10.0-base nvidia-smi
 
 이 또한 설치가 제대로 되었다면 마지막에 다음과 같이 `nvidia-smi` 출력이 나올 겁니다. 
 
-{{< figure src="/images/post/nipa_docker/Untitled_5.png" title="image" >}}
+{{< figure src="/images/post/nipa_docker/Untitled_5.png" >}}
 
 |하....편안....|
 |:--:|

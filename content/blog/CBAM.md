@@ -33,19 +33,19 @@ URL: https://arxiv.org/abs/1807.06521
 - Convolution을 이용하여 channel, spatial information 을 추출하고 섞어서 사용.
 - channel, spatial attention module은 각각 "what", "where"에 대한 정보를 학습할 수 있음.
 
-{{< figure src="/images/post/cbam/Untitled.png" title="image" >}}
+{{< figure src="/images/post/cbam/Untitled.png" >}}
 
 # Convolutional Block Attention Module
 
 - CBAM 의 구조는 다음 사진과 같음.
 
-$$F: \text{Input feature map} \\ F':\text{Channel attention module feature map} \\ F'': \text{Spatial attention module feature map} \\ F' = M_c(F)\bigotimes F \\F'' = M_s(F')\bigotimes F'$$
+$$F: \text{Input feature map} \\\ F':\text{Channel attention module feature map} \\\ F'': \text{Spatial attention module feature map} \\\ F' = M_c(F)\bigotimes F \\\ F'' = M_s(F')\bigotimes F'$$
 
-{{< figure src="/images/post/cbam/Untitled_1.png" title="image" >}}
+{{< figure src="/images/post/cbam/Untitled_1.png" >}}
 
 ## Channel attention branch
 
-$$M_c(F) = \sigma(MLP(AvgPool(F)) + MLP(MaxPool(F))) \\ = \sigma(W1(W0(F^c_{avg})) + W1(W0(F^c_{max})))$$
+$$M_c(F) = \sigma(MLP(AvgPool(F)) + MLP(MaxPool(F))) \\\ = \sigma(W1(W0(F^c_{avg})) + W1(W0(F^c_{max})))$$
 
 W0 의 output channel 크기: F의 채널 수 / reduction ratio(r)
 
@@ -53,7 +53,7 @@ W1 의 output channel 크기: F의 채널 수
 
 ## Spatial attention branch
 
-$$M_s(F)=\sigma(f^{7\times7}([AvgPool(F); MaxPool(F)])) \\ = \sigma(f^{7 \times 7}([F^s_{avg};F^s_{max}]))$$
+$$M_s(F)=\sigma(f^{7\times7}([AvgPool(F); MaxPool(F)])) \\\ = \sigma(f^{7 \times 7}([F^s_{avg};F^s_{max}]))$$
 
 - 7x7 Convolution의 output channel 크기: 1
 
@@ -68,39 +68,39 @@ $$M_s(F)=\sigma(f^{7\times7}([AvgPool(F); MaxPool(F)])) \\ = \sigma(f^{7 \times 
 
 - Pooling 기법별 성능 비교
 
-{{< figure src="/images/post/cbam/Untitled_2.png" title="image" >}}
+{{< figure src="/images/post/cbam/Untitled_2.png" >}}
 
 ## Spatial attention
 
 - Pooling, convolution kernel size 에 따른 성능 비교
 
-{{< figure src="/images/post/cbam/Untitled_3.png" title="image" >}}
+{{< figure src="/images/post/cbam/Untitled_3.png" >}}
 
 ## Arrangement of the channel and spatial attention
 
 - Attention module 순서에 따른 성능 비교
 
-{{< figure src="/images/post/cbam/Untitled_4.png" title="image" >}}
+{{< figure src="/images/post/cbam/Untitled_4.png" >}}
 
 # Result
 
 ### Classification Result on ImageNet-1K
 
-{{< figure src="/images/post/cbam/Untitled_5.png" title="image" >}}
+{{< figure src="/images/post/cbam/Untitled_5.png" >}}
 
-{{< figure src="/images/post/cbam/Untitled_6.png" title="image" >}}
+{{< figure src="/images/post/cbam/Untitled_6.png" >}}
 
-{{< figure src="/images/post/cbam/Untitled_7.png" title="image" >}}
+{{< figure src="/images/post/cbam/Untitled_7.png" >}}
 
 ### Object Detection on MS COCO and VOC 2007
 
-{{< figure src="/images/post/cbam/Untitled_8.png" title="image" >}}
+{{< figure src="/images/post/cbam/Untitled_8.png" >}}
 
-{{< figure src="/images/post/cbam/Untitled_9.png" title="image" >}}
+{{< figure src="/images/post/cbam/Untitled_9.png" >}}
 
 ### Network Visualization with Grad-CAM
 
-{{< figure src="/images/post/cbam/Untitled_10.png" title="image" >}}
+{{< figure src="/images/post/cbam/Untitled_10.png" >}}
 
 ## P.S
 

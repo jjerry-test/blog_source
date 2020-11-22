@@ -30,7 +30,7 @@ URL: https://arxiv.org/abs/1704.04861
 
 - 모바일, 임베디드에 적용할 수 있는 네트워크.
 
-{{< figure src="/images/post/mobilev1/Untitled.png" title="image" >}}
+{{< figure src="/images/post/mobilev1/Untitled.png" >}}
 
 # **1. Introduction**
 
@@ -51,9 +51,9 @@ URL: https://arxiv.org/abs/1704.04861
 
 - Depthwise Convolution 수행 후 Pointwise Convolution 수행.
 
-{{< figure src="/images/post/mobilev1/Untitled_1.png" title="image" >}}
+{{< figure src="/images/post/mobilev1/Untitled_1.png" >}}
 
-{{< figure src="/images/post/mobilev1/Untitled_2.png" title="image" >}}
+{{< figure src="/images/post/mobilev1/Untitled_2.png" >}}
 
 - MobileNet 에서는 3 x 3 의 Depthwise saparable convolution 사용.
 - 연산량이 약 8~9 배로 크게 감소.
@@ -62,15 +62,15 @@ URL: https://arxiv.org/abs/1704.04861
 
 - 총 28개의 레이어
 
-{{< figure src="/images/post/mobilev1/Untitled_3.png" title="image" >}}
+{{< figure src="/images/post/mobilev1/Untitled_3.png" >}}
 
 - MobileNet의 Convolution Block 구조
 
-{{< figure src="/images/post/mobilev1/Untitled_4.png" title="image" >}}
+{{< figure src="/images/post/mobilev1/Untitled_4.png" >}}
 
 - MobileNet의 대부분 파라미터, 연산 시간은 1x1 Conv
 
-{{< figure src="/images/post/mobilev1/Untitled_5.png" title="image" >}}
+{{< figure src="/images/post/mobilev1/Untitled_5.png" >}}
 
 - RMSprop, asynchronous gradient descent 사용.
 - Tensorflow 로 구현.
@@ -82,7 +82,7 @@ URL: https://arxiv.org/abs/1704.04861
 
 ## **3.4 Resolution Multiplier: Reduced Representation**
 
-{{< figure src="/images/post/mobilev1/Untitled_6.png" title="image" >}}
+{{< figure src="/images/post/mobilev1/Untitled_6.png" >}}
 
 # **4. Experiments**
 
@@ -90,47 +90,47 @@ URL: https://arxiv.org/abs/1704.04861
 
 ## **4.1 Model Choices**
 
-{{< figure src="/images/post/mobilev1/Untitled_7.png" title="image" >}}
+{{< figure src="/images/post/mobilev1/Untitled_7.png" >}}
 
-{{< figure src="/images/post/mobilev1/Untitled_8.png" title="image" >}}
+{{< figure src="/images/post/mobilev1/Untitled_8.png" >}}
 
 ## **4.2 Model Shrinking Hyperparemeters**
 
-{{< figure src="/images/post/mobilev1/Untitled_9.png" title="image" >}}
+{{< figure src="/images/post/mobilev1/Untitled_9.png" >}}
 
-{{< figure src="/images/post/mobilev1/Untitled_10.png" title="image" >}}
+{{< figure src="/images/post/mobilev1/Untitled_10.png" >}}
 
-{{< figure src="/images/post/mobilev1/Untitled_11.png" title="image" >}}
+{{< figure src="/images/post/mobilev1/Untitled_11.png" >}}
 
-{{< figure src="/images/post/mobilev1/Untitled_12.png" title="image" >}}
+{{< figure src="/images/post/mobilev1/Untitled_12.png" >}}
 
-{{< figure src="/images/post/mobilev1/Untitled_13.png" title="image" >}}
+{{< figure src="/images/post/mobilev1/Untitled_13.png" >}}
 
-{{< figure src="/images/post/mobilev1/Untitled_14.png" title="image" >}}
+{{< figure src="/images/post/mobilev1/Untitled_14.png" >}}
 
 ## **4.3 Fine Grained Recognition**
 
-{{< figure src="/images/post/mobilev1/Untitled_15.png" title="image" >}}
+{{< figure src="/images/post/mobilev1/Untitled_15.png" >}}
 
 ## **4.4 Large Scale Geolocalization**
 
-{{< figure src="/images/post/mobilev1/Untitled_16.png" title="image" >}}
+{{< figure src="/images/post/mobilev1/Untitled_16.png" >}}
 
 ## **4.5 Face Attributed**
 
-{{< figure src="/images/post/mobilev1/Untitled_17.png" title="image" >}}
+{{< figure src="/images/post/mobilev1/Untitled_17.png" >}}
 
-{{< figure src="/images/post/mobilev1/Untitled_18.png" title="image" >}}
+{{< figure src="/images/post/mobilev1/Untitled_18.png" >}}
 
 ## **4.6 Object Detection**
 
-{{< figure src="/images/post/mobilev1/Untitled_19.png" title="image" >}}
+{{< figure src="/images/post/mobilev1/Untitled_19.png" >}}
 
-{{< figure src="/images/post/mobilev1/Untitled_20.png" title="image" >}}
+{{< figure src="/images/post/mobilev1/Untitled_20.png" >}}
 
 ## **4.7 Face Embeddings**
 
-{{< figure src="/images/post/mobilev1/Untitled_21.png" title="image" >}}
+{{< figure src="/images/post/mobilev1/Untitled_21.png" >}}
 
 # **5. Conclusion**
 

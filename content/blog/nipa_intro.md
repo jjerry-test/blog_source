@@ -27,13 +27,13 @@ NIPA는 [**정보통신산업진흥원**](https://www.nipa.kr/) 의 약자인데
 
 간단하게 그림으로 보여드리면 이렇습니다. 
 
-{{< figure src="/images/post/nipa_intro/Untitled.png" title="image" >}}
+{{< figure src="/images/post/nipa_intro/Untitled.png" >}}
 
 더 간단하게 설명드리면 **`GPU서버 지원해드림 ㅇㅇ`** 이겁니다. 
 
 어느 정도 사양이냐...
 
-{{< figure src="/images/post/nipa_intro/Untitled_1.png" title="image" >}}
+{{< figure src="/images/post/nipa_intro/Untitled_1.png" >}}
 
 **일반 사용자**와 **수시 사용자**로 나뉘는데요. 그 차이는 사이트에서 확인하시길..  
 
@@ -41,7 +41,7 @@ NIPA는 [**정보통신산업진흥원**](https://www.nipa.kr/) 의 약자인데
 
 제가 포스팅, 환경구축과 같은 자료를 만들기 위해 신청한 서버입니다. 
 
-{{< figure src="/images/post/nipa_intro/Untitled_2.png" title="image" >}}
+{{< figure src="/images/post/nipa_intro/Untitled_2.png" >}}
 
 위 GPU 사진은 **수시 사용자** 기준입니다. 일반 사용자면 V100 두개겠네요.
 

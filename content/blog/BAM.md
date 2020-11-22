@@ -48,19 +48,19 @@ URL: https://arxiv.org/abs/1807.06514
 
 - 본 논문에선 attention 의 효과를 보기 위해 기존의 architecture 에 사용하기 쉬운 가벼운 Bottle Attention Module(BAM) 제안
 
-{{< figure src="/images/post/bam/Untitled.png" title="image" >}}
+{{< figure src="/images/post/bam/Untitled.png" >}}
 
 # Bottleneck Attention Module
 
 - BAM 의 구조는 다음 사진과 같음.
 
-$$F: \text{Input feature map} \\ M(F): \text{Attention map} \\F' = F + F\bigotimes M(F) \\ M(F) = \sigma(M_c(F) + M_s(F))$$
+$$F: \text{Input feature map} \\\ M(F): \text{Attention map} \\\ F' = F + F\bigotimes M(F) \\\ M(F) = \sigma(M_c(F) + M_s(F))$$
 
-{{< figure src="/images/post/bam/Untitled_1.png" title="image" >}}
+{{< figure src="/images/post/bam/Untitled_1.png" >}}
 
 ## Channel attention branch
 
-$$M_c(F) = BN(MLP(AvgPool(F))) \\ = BN(W_1(W_0AvgPool(F) + b_0)+b_1)$$
+$$M_c(F) = BN(MLP(AvgPool(F))) \\\ = BN(W_1(W_0AvgPool(F) + b_0)+b_1)$$
 
 W0 의 output channel 크기: F의 채널 수 / reduction ratio(r)
 
@@ -100,27 +100,27 @@ $$M(F) = \sigma(M_c(F) + M_s(F))$$
 - BAM 사용 여부에 따른 성능 비교
 - Table 1 (c)
 
-{{< figure src="/images/post/bam/Untitled_2.png" title="image" >}}
+{{< figure src="/images/post/bam/Untitled_2.png" >}}
 
 ## Bottleneck: The efficient point to place BAM
 
 - BAM 사용 위치에 따른 성능 비교.
 
-{{< figure src="/images/post/bam/Untitled_3.png" title="image" >}}
+{{< figure src="/images/post/bam/Untitled_3.png" >}}
 
 # Result
 
 ## Classification Result on CIFAR-100 and ImageNet-1K
 
-{{< figure src="/images/post/bam/Untitled_4.png" title="image" >}}
+{{< figure src="/images/post/bam/Untitled_4.png" >}}
 
 ## Object Detection on MS COCO and VOC 2007
 
-{{< figure src="/images/post/bam/Untitled_5.png" title="image" >}}
+{{< figure src="/images/post/bam/Untitled_5.png" >}}
 
 ## Comparison with Squeeze-and-Excitation
 
-{{< figure src="/images/post/bam/Untitled_6.png" title="image" >}}
+{{< figure src="/images/post/bam/Untitled_6.png" >}}
 
 ### P.S
 

@@ -49,7 +49,7 @@ NVIDIA 사이트에서 GPU 버전이랑 맞는걸로!!
 Ctrl + Alt + F1을 눌러 tty1으로 들어가서 로그인 후 reboot을 실행해줍시다.  
 로그인 후 NVIDIA X Server Settings 를 켜면
 
-{{< figure src="![image](/images/post/CUDA/01.png)" title="image" >}}
+{{< figure src="![image](/images/post/CUDA/01.png)" >}}
 
 요래 설치 된걸 확인할 수 있습니다.
 

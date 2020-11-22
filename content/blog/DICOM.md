@@ -53,7 +53,7 @@ plt.show()
  이런 식으로 작성하시면 됩니다.  
  예시를 보여드리면
 
- <img src='https://jjerry-k.github.io/public/img/dicom/01.png'>
+{{< figure src="/images/post/dicom/01.png" >}}
 
 예시 영상이 좀 작네요...  
 어쨌든 이런 식으로 읽습니다. 

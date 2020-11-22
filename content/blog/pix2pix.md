@@ -35,14 +35,14 @@ GAN을 이용한 Image translation 의 시초에 가까운 Pix2Pix를 알아보�
 - 이 논문의 main contribution은 다양한 문제에서 Conditional GAN이 합리적인 결과를 생성한다는 것을 입증하는 것.
 - 이를 위해 Image-to-Image translation 으로 연구 진행.
 
-{{< figure src="/images/post/pix2pix/Untitled.png" title="image" >}}
+{{< figure src="/images/post/pix2pix/Untitled.png" >}}
 
 # Method
 
 - 정말 간단한 구조
 - 다음 사진은 Edge(Sketch) 영상을 Photo 영상으로 만드는 예시.
 
-{{< figure src="/images/post/pix2pix/Untitled_1.png" title="image" >}}
+{{< figure src="/images/post/pix2pix/Untitled_1.png" >}}
 
 ## Objective
 
@@ -61,7 +61,7 @@ $$G^* = argmin_Gmax_D\mathcal{L}_{cGAN}(G, D) + \lambda\mathcal{L}_{L1}(G)$$
 
 - U-Net 과 비슷하나 Concatenate를 Add로 변경.
 
-{{< figure src="/images/post/pix2pix/Untitled_2.png" title="image" >}}
+{{< figure src="/images/post/pix2pix/Untitled_2.png" >}}
 
 ### Markovian discriminator (PatchGAN)
 
@@ -70,7 +70,7 @@ $$G^* = argmin_Gmax_D\mathcal{L}_{cGAN}(G, D) + \lambda\mathcal{L}_{L1}(G)$$
 - 좀 더 다양한 High frequency 에 적합하도록 하기 위해 local image patch 에 대해 discriminator를 적용. (PatchGAN)
 - NxN patch 에 대해 각각 real/fake를 판별.
 
-{{< figure src="/images/post/pix2pix/Untitled_3.png" title="image" >}}
+{{< figure src="/images/post/pix2pix/Untitled_3.png" >}}
 
 ## Optimization and Inference
 
@@ -100,51 +100,51 @@ $$G^* = argmin_Gmax_D\mathcal{L}_{cGAN}(G, D) + \lambda\mathcal{L}_{L1}(G)$$
 
 ## Analysis of the  objective function
 
-{{< figure src="/images/post/pix2pix/Untitled_3.png" title="image" >}}
+{{< figure src="/images/post/pix2pix/Untitled_3.png" >}}
 
-{{< figure src="/images/post/pix2pix/Untitled_4.png" title="image" >}}
+{{< figure src="/images/post/pix2pix/Untitled_4.png" >}}
 
 ## Analysis of the generator architecture
 
 - U-Net 기반의 구조로 했을 때가 훨씬 좋음.
 
-{{< figure src="/images/post/pix2pix/Untitled_5.png" title="image" >}}
+{{< figure src="/images/post/pix2pix/Untitled_5.png" >}}
 
-{{< figure src="/images/post/pix2pix/Untitled_6.png" title="image" >}}
+{{< figure src="/images/post/pix2pix/Untitled_6.png" >}}
 
 ## From PixelGANs to PatchGANs to ImageGANs
 
 - Discriminator의 출력을 1x1, 16x16, 70x70, 286x286과 같이 차례로 키우면서 실험.
 
-{{< figure src="/images/post/pix2pix/Untitled_7.png" title="image" >}}
+{{< figure src="/images/post/pix2pix/Untitled_7.png" >}}
 
-{{< figure src="/images/post/pix2pix/Untitled_8.png" title="image" >}}
+{{< figure src="/images/post/pix2pix/Untitled_8.png" >}}
 
 ## Perceptual validation
 
 - 사람이 보기에도 L1 + cGAN이 좋음.
 
-{{< figure src="/images/post/pix2pix/Untitled_9.png" title="image" >}}
+{{< figure src="/images/post/pix2pix/Untitled_9.png" >}}
 
 - Colorization에서는 좀 떨어짐.
 
-{{< figure src="/images/post/pix2pix/Untitled_10.png" title="image" >}}
+{{< figure src="/images/post/pix2pix/Untitled_10.png" >}}
 
 ## Semantic segmentation
 
 - 해당 task 에서는 오히려 L1과 같은 reconstruction loss만을 이용한 구조가 적합해 보임.
 
-{{< figure src="/images/post/pix2pix/Untitled_11.png" title="image" >}}
+{{< figure src="/images/post/pix2pix/Untitled_11.png" >}}
 
-{{< figure src="/images/post/pix2pix/Untitled_12.png" title="image" >}}
+{{< figure src="/images/post/pix2pix/Untitled_12.png" >}}
 
 ## Community-driven Research
 
 - Twitter 에 공개한 후 다른 연구자들의 실험.
 
-{{< figure src="/images/post/pix2pix/Untitled_13.png" title="image" >}}
+{{< figure src="/images/post/pix2pix/Untitled_13.png" >}}
 
-{{< figure src="/images/post/pix2pix/Untitled_14.png" title="image" >}}
+{{< figure src="/images/post/pix2pix/Untitled_14.png" >}}
 
 
 ## P.S

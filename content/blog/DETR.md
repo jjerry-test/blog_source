@@ -34,7 +34,7 @@ URL: https://ai.facebook.com/research/publications/end-to-end-object-detection-w
 - [Transformer](https://arxiv.org/abs/1706.03762) 를 사용.
 - 새로운 Loss function 도입.
 
-{{< figure src="/images/post/DETR/Untitled.png" title="image" >}}
+{{< figure src="/images/post/DETR/Untitled.png" >}}
 
 # Related Works
 
@@ -65,19 +65,19 @@ URL: https://ai.facebook.com/research/publications/end-to-end-object-detection-w
 
 - DETR은 크게 두 개의 장점이 있음. → a set prediction loss, a architecture
 
-{{< figure src="/images/post/DETR/Untitled_1.png" title="image" >}}
+{{< figure src="/images/post/DETR/Untitled_1.png" >}}
 
 ## Object detection set prediction loss
 
-$$\hat{\sigma} = {argmin}_{\sigma \in \mathfrak{S}_N} \sum^N_i \mathcal{L}_{match}(y_i, \hat{y}_{\sigma(i)})$$
+$$\hat{\sigma} = {argmin}\_{\sigma \in \mathfrak{S}\_N} \sum^N\_i \mathcal{L}\_{match}(y\_i, \hat{y}\_{\sigma(i)})$$
 
-$$\mathcal{L}_{match}(y_i, \hat{y}_{\sigma(i)}) = -1_{c_i \neq \phi}\hat{p}_{\sigma(i)}(c_i) +1_{c_i \neq \phi}\mathcal{L}_{box}(b_i, \hat{b}_{\sigma(i)})$$
+$$\mathcal{L}\_{match}(y\_i, \hat{y}\_{\sigma(i)}) = -1\_{c\_i \neq \phi}\hat{p}\_{\sigma(i)}(c\_i) +1\_{c\_i \neq \phi}\mathcal{L}\_{box}(b\_i, \hat{b}\_{\sigma(i)})$$
 
-$$\mathcal{L}_{Hungarian}(y, \hat{y}) = \sum^N_i[-\log\hat{p}_{\hat{\sigma}(i)}(c_i) +1_{c_i \neq \phi}\mathcal{L}_{box}(b_i, \hat{b}_{\hat{\sigma}(i)})]$$
+$$\mathcal{L}\_{Hungarian}(y, \hat{y}) = \sum^N\_i[-\log\hat{p}\_{\hat{\sigma}(i)}(c\_i) +1\_{c\_i \neq \phi}\mathcal{L}\_{box}(b\_i, \hat{b}\_{\hat{\sigma}(i)})]$$
 
 ### Bounding box loss
 
-$$\lambda_{iou}\mathcal{L}_{iou}(b_i, \hat{b}_{\sigma(i)}) + \lambda_{\mathrm{L}1}\|b_i - \hat{b}_{\sigma(i)}\|_1$$
+$$\lambda\_{iou}\mathcal{L}\_{iou}(b\_i, \hat{b}\_{\sigma(i)}) + \lambda\_{\mathrm{L}1}\|b\_i - \hat{b}\_{\sigma(i)}\|\_1$$
 
 ## DETR architecture
 
@@ -111,17 +111,17 @@ $$\lambda_{iou}\mathcal{L}_{iou}(b_i, \hat{b}_{\sigma(i)}) + \lambda_{\mathrm{L}
 
 ## Comparison with Faster R-CNN
 
-{{< figure src="/images/post/DETR/Untitled_2.png" title="image" >}}
+{{< figure src="/images/post/DETR/Untitled_2.png" >}}
 
 ## Ablations
 
-{{< figure src="/images/post/DETR/Untitled_3.png" title="image" >}}
+{{< figure src="/images/post/DETR/Untitled_3.png" >}}
 
-{{< figure src="/images/post/DETR/Untitled_4.png" title="image" >}}
+{{< figure src="/images/post/DETR/Untitled_4.png" >}}
 
 ## Panoptic segmentation
 
-{{< figure src="/images/post/DETR/Untitled_5.png" title="image" >}}
+{{< figure src="/images/post/DETR/Untitled_5.png" >}}
 
 
 
