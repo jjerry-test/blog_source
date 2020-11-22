@@ -1,6 +1,6 @@
-baseURL = "jjerry-test.github.io/"
+baseURL = "jjerry-test.github.io"
 languageCode = "en-us"
-title = "My New Hugo Site"
+title = "Jerry"
 theme = "liva-hugo"
 summaryLength = "10"
 paginate = 6
