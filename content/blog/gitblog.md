@@ -1,5 +1,5 @@
 ---
-title: Github 블로그 만들기
+title: Jekyll Blog
 date: 2018-10-24T18:30:46+06:00
 draft: false
 
